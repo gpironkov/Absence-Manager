@@ -1,0 +1,23 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
+    <UserSecretsId>aspnet-Jandaya-37965A23-2494-4E0C-A178-2D5DAFAE752D</UserSecretsId>
+    <AspNetCoreHostingModel>InProcess</AspNetCoreHostingModel>
+  </PropertyGroup>
+
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.App" />
+    <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.2.0" PrivateAssets="All" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.2.3" />
+  </ItemGroup>
+
+
+  <ItemGroup>
+    <ProjectReference Include="..\Jandaya.Data\Jandaya.Data.csproj" />
+    <ProjectReference Include="..\Jandaya.Services.Mapping\Jandaya.Services.Mapping.csproj" />
+    <ProjectReference Include="..\Jandaya.Services\Jandaya.Services.csproj" />
+  </ItemGroup>
+
+</Project>

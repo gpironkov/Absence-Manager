@@ -1,0 +1,8 @@
+C:\Users\gpironkov\source\repos\Jandaya\Jandaya.Common\bin\Debug\netstandard2.0\Jandaya.Common.deps.json
+C:\Users\gpironkov\source\repos\Jandaya\Jandaya.Common\bin\Debug\netstandard2.0\Jandaya.Common.dll
+C:\Users\gpironkov\source\repos\Jandaya\Jandaya.Common\bin\Debug\netstandard2.0\Jandaya.Common.pdb
+C:\Users\gpironkov\source\repos\Jandaya\Jandaya.Common\obj\Debug\netstandard2.0\Jandaya.Common.csproj.CoreCompileInputs.cache
+C:\Users\gpironkov\source\repos\Jandaya\Jandaya.Common\obj\Debug\netstandard2.0\Jandaya.Common.AssemblyInfoInputs.cache
+C:\Users\gpironkov\source\repos\Jandaya\Jandaya.Common\obj\Debug\netstandard2.0\Jandaya.Common.AssemblyInfo.cs
+C:\Users\gpironkov\source\repos\Jandaya\Jandaya.Common\obj\Debug\netstandard2.0\Jandaya.Common.dll
+C:\Users\gpironkov\source\repos\Jandaya\Jandaya.Common\obj\Debug\netstandard2.0\Jandaya.Common.pdb

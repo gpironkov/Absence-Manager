@@ -1,0 +1,16 @@
+C:\Users\gpironkov\source\repos\Jandaya\Jandaya.Services\bin\Debug\netstandard2.0\Jandaya.Services.deps.json
+C:\Users\gpironkov\source\repos\Jandaya\Jandaya.Services\bin\Debug\netstandard2.0\Jandaya.Services.dll
+C:\Users\gpironkov\source\repos\Jandaya\Jandaya.Services\bin\Debug\netstandard2.0\Jandaya.Services.pdb
+C:\Users\gpironkov\source\repos\Jandaya\Jandaya.Services\bin\Debug\netstandard2.0\Jandaya.Common.dll
+C:\Users\gpironkov\source\repos\Jandaya\Jandaya.Services\bin\Debug\netstandard2.0\Jandaya.Data.dll
+C:\Users\gpironkov\source\repos\Jandaya\Jandaya.Services\bin\Debug\netstandard2.0\Jandaya.Services.Mapping.dll
+C:\Users\gpironkov\source\repos\Jandaya\Jandaya.Services\bin\Debug\netstandard2.0\Jandaya.Data.pdb
+C:\Users\gpironkov\source\repos\Jandaya\Jandaya.Services\bin\Debug\netstandard2.0\Jandaya.Services.Mapping.pdb
+C:\Users\gpironkov\source\repos\Jandaya\Jandaya.Services\bin\Debug\netstandard2.0\Jandaya.Common.pdb
+C:\Users\gpironkov\source\repos\Jandaya\Jandaya.Services\obj\Debug\netstandard2.0\Jandaya.Services.csprojAssemblyReference.cache
+C:\Users\gpironkov\source\repos\Jandaya\Jandaya.Services\obj\Debug\netstandard2.0\Jandaya.Services.csproj.CoreCompileInputs.cache
+C:\Users\gpironkov\source\repos\Jandaya\Jandaya.Services\obj\Debug\netstandard2.0\Jandaya.Services.AssemblyInfoInputs.cache
+C:\Users\gpironkov\source\repos\Jandaya\Jandaya.Services\obj\Debug\netstandard2.0\Jandaya.Services.AssemblyInfo.cs
+C:\Users\gpironkov\source\repos\Jandaya\Jandaya.Services\obj\Debug\netstandard2.0\Jandaya.Services.csproj.CopyComplete
+C:\Users\gpironkov\source\repos\Jandaya\Jandaya.Services\obj\Debug\netstandard2.0\Jandaya.Services.dll
+C:\Users\gpironkov\source\repos\Jandaya\Jandaya.Services\obj\Debug\netstandard2.0\Jandaya.Services.pdb
