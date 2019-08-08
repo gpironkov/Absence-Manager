@@ -944,11 +944,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\gpironkov\\source\\repos\\Jandaya\\Jandaya.Services.Mapping\\Jandaya.Services.Mapping.csproj",
+      "projectUniqueName": "C:\\Users\\gpironkov\\Desktop\\Georgi\\proj2\\Absence-Manager\\Jandaya\\Jandaya.Services.Mapping\\Jandaya.Services.Mapping.csproj",
       "projectName": "Jandaya.Services.Mapping",
-      "projectPath": "C:\\Users\\gpironkov\\source\\repos\\Jandaya\\Jandaya.Services.Mapping\\Jandaya.Services.Mapping.csproj",
+      "projectPath": "C:\\Users\\gpironkov\\Desktop\\Georgi\\proj2\\Absence-Manager\\Jandaya\\Jandaya.Services.Mapping\\Jandaya.Services.Mapping.csproj",
       "packagesPath": "C:\\Users\\gpironkov\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\gpironkov\\source\\repos\\Jandaya\\Jandaya.Services.Mapping\\obj\\",
+      "outputPath": "C:\\Users\\gpironkov\\Desktop\\Georgi\\proj2\\Absence-Manager\\Jandaya\\Jandaya.Services.Mapping\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

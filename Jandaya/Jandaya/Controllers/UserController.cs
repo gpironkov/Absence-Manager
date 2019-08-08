@@ -1,52 +1,71 @@
 ﻿namespace Jandaya.Controllers
 {
+    using Jandaya.Common;
     using Jandaya.Data;
     using Jandaya.Data.Models;
-    using Jandaya.Data.Repositories;
-    using Jandaya.Data.ViewModels;
-    using Jandaya.Services;
+    using Microsoft.AspNetCore.Identity;
     using Microsoft.AspNetCore.Mvc;
     using System.Linq;
+    using System.Threading.Tasks;
 
     public class UserController : Controller
     {
+        private readonly SignInManager<User> _signInManager;
+        private readonly UserManager<User> _userManager;
+
         private readonly JandayaDbContext dbContext;
 
-        public UserController(JandayaDbContext dbContext)
+        public UserController(JandayaDbContext dbContext, 
+            UserManager<User> userManager, 
+            SignInManager<User> signInManager)
         {
             this.dbContext = dbContext;
+            this._userManager = userManager;
+            this._signInManager = signInManager;
         }
 
         public IActionResult Register() => View();
 
         [HttpPost]
-        public IActionResult Register(CreateUserBindingModel createUserModel)
+        public async Task<IActionResult> Register(CreateUserBindingModel createUserModel)
         {
-            if (!ModelState.IsValid)
+            var returnUrl = "/Home/Index";
+
+            if (ModelState.IsValid)
             {
-                return this.Redirect("User/Register");
+                var countryFromDb = dbContext.Countries.SingleOrDefault(s => s.Name == createUserModel.Country);
+
+                var user = new User
+                {
+                    UserName = createUserModel.UserName,
+                    FirstName = createUserModel.FirstName,
+                    LastName = createUserModel.LastName,
+                    Email = createUserModel.Email,
+                    CountryId = countryFromDb.Id,
+                };
+
+                //dbContext.Users.Add(user);
+                //await dbContext.SaveChangesAsync();
+
+                var result = await _userManager.CreateAsync(user, createUserModel.Password);
+                if (result.Succeeded)
+                {
+                    if (_userManager.Users.Count() == 1)
+                    {
+                        await _userManager.AddToRoleAsync(user, GlobalConstants.AdministratorRoleName);
+                    }
+                    else
+                    {
+                        await _userManager.AddToRoleAsync(user, GlobalConstants.EmployeeRoleName);
+                    }
+
+                    await _signInManager.SignInAsync(user, isPersistent: false);
+
+                    return Redirect(returnUrl);
+                }
             }
 
-            CountryService cs = new CountryService(dbContext);
-            var countryIds = cs.GetCountryIds();
-
-            var countryFromDb = dbContext.Countries.SingleOrDefault(s => s.Name == createUserModel.Country);
-            User user = new User
-            {
-                UserName = createUserModel.UserName,
-                PasswordHash = createUserModel.Password,
-                //PasswordHash = createUserModel.ConfirmPassword,
-                FirstName = createUserModel.FirstName,
-                LastName = createUserModel.LastName,
-                Email = createUserModel.Email,
-                //CountryId = createUserModel.CountryId,
-                Country = countryFromDb,
-            };
-
-            dbContext.Add(user);
-            dbContext.SaveChanges();
-
-            return this.Redirect("/");
+            return Redirect("/");
         }
     }
 }

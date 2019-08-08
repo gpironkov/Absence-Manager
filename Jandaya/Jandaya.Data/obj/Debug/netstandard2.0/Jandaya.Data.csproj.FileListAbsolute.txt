@@ -12,3 +12,17 @@ C:\Users\gpironkov\source\repos\Jandaya\Jandaya.Data\obj\Debug\netstandard2.0\Ja
 C:\Users\gpironkov\source\repos\Jandaya\Jandaya.Data\obj\Debug\netstandard2.0\Jandaya.Data.pdb
 C:\Users\gpironkov\source\repos\Jandaya\Jandaya.Data\bin\Debug\netstandard2.0\Jandaya.Services.Mapping.dll
 C:\Users\gpironkov\source\repos\Jandaya\Jandaya.Data\bin\Debug\netstandard2.0\Jandaya.Services.Mapping.pdb
+C:\Users\gpironkov\Desktop\Georgi\proj2\Absence-Manager\Jandaya\Jandaya.Data\bin\Debug\netstandard2.0\Jandaya.Data.deps.json
+C:\Users\gpironkov\Desktop\Georgi\proj2\Absence-Manager\Jandaya\Jandaya.Data\bin\Debug\netstandard2.0\Jandaya.Data.dll
+C:\Users\gpironkov\Desktop\Georgi\proj2\Absence-Manager\Jandaya\Jandaya.Data\bin\Debug\netstandard2.0\Jandaya.Data.pdb
+C:\Users\gpironkov\Desktop\Georgi\proj2\Absence-Manager\Jandaya\Jandaya.Data\bin\Debug\netstandard2.0\Jandaya.Common.dll
+C:\Users\gpironkov\Desktop\Georgi\proj2\Absence-Manager\Jandaya\Jandaya.Data\bin\Debug\netstandard2.0\Jandaya.Services.Mapping.dll
+C:\Users\gpironkov\Desktop\Georgi\proj2\Absence-Manager\Jandaya\Jandaya.Data\bin\Debug\netstandard2.0\Jandaya.Common.pdb
+C:\Users\gpironkov\Desktop\Georgi\proj2\Absence-Manager\Jandaya\Jandaya.Data\bin\Debug\netstandard2.0\Jandaya.Services.Mapping.pdb
+C:\Users\gpironkov\Desktop\Georgi\proj2\Absence-Manager\Jandaya\Jandaya.Data\obj\Debug\netstandard2.0\Jandaya.Data.csprojAssemblyReference.cache
+C:\Users\gpironkov\Desktop\Georgi\proj2\Absence-Manager\Jandaya\Jandaya.Data\obj\Debug\netstandard2.0\Jandaya.Data.csproj.CoreCompileInputs.cache
+C:\Users\gpironkov\Desktop\Georgi\proj2\Absence-Manager\Jandaya\Jandaya.Data\obj\Debug\netstandard2.0\Jandaya.Data.AssemblyInfoInputs.cache
+C:\Users\gpironkov\Desktop\Georgi\proj2\Absence-Manager\Jandaya\Jandaya.Data\obj\Debug\netstandard2.0\Jandaya.Data.AssemblyInfo.cs
+C:\Users\gpironkov\Desktop\Georgi\proj2\Absence-Manager\Jandaya\Jandaya.Data\obj\Debug\netstandard2.0\Jandaya.Data.csproj.CopyComplete
+C:\Users\gpironkov\Desktop\Georgi\proj2\Absence-Manager\Jandaya\Jandaya.Data\obj\Debug\netstandard2.0\Jandaya.Data.dll
+C:\Users\gpironkov\Desktop\Georgi\proj2\Absence-Manager\Jandaya\Jandaya.Data\obj\Debug\netstandard2.0\Jandaya.Data.pdb

@@ -2,8 +2,8 @@
 {
     public static class GlobalConstants
     {
-        public const string AdministratorRoleName = "Administrator";
+        public const string AdministratorRoleName = "Admin";
         public const string ManagerRoleName = "Manager";
-        public const string EmployeeRoleName = "Employee";
+        public const string EmployeeRoleName = "User";
     }
 }

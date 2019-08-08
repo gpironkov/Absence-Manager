@@ -24,43 +24,45 @@
         <div class="form-group">
             <label asp-for="Input.Password" class="col-sm-3 control-label"></label>
             <div class="col-sm-9">
-                <input asp-for="Input.Password" class="form-control" type="password"/>
+                <input asp-for="Input.Password" class="form-control" type="password" />
                 <span asp-validation-for="Input.Password" class="text-danger"></span>
             </div>
         </div>
         <div class="form-group">
             <label asp-for="Input.ConfirmPassword" class="col-sm-3 control-label"></label>
             <div class="col-sm-9">
-                <input asp-for="Input.ConfirmPassword" class="form-control" type="password"/>
+                <input asp-for="Input.ConfirmPassword" class="form-control" type="password" />
                 <span asp-validation-for="Input.ConfirmPassword" class="text-danger"></span>
             </div>
         </div>
         <div class="form-group">
             <label asp-for="Input.FirstName" class="col-sm-3 control-label"></label>
             <div class="col-sm-9">
-                <input asp-for="Input.FirstName" class="form-control" type="text"/>
+                <input asp-for="Input.FirstName" class="form-control" type="text" />
                 <span asp-validation-for="Input.FirstName" class="text-danger"></span>
             </div>
         </div>
         <div class="form-group">
             <label asp-for="Input.LastName" class="col-sm-3 control-label"></label>
             <div class="col-sm-9">
-                <input asp-for="Input.LastName" class="form-control" type="text"/>
+                <input asp-for="Input.LastName" class="form-control" type="text" />
                 <span asp-validation-for="Input.LastName" class="text-danger"></span>
             </div>
         </div>
         <div class="form-group">
             <label asp-for="Input.Email" class="col-sm-3 control-label"></label>
             <div class="col-sm-9">
-                <input asp-for="Input.Email" class="form-control" type="email"/>
+                <input asp-for="Input.Email" class="form-control" type="email" />
                 <span asp-validation-for="Input.Email" class="text-danger"></span>
             </div>
-        </div>        
+        </div>
         <div class="form-group">
-            <label for="country" class="col-sm-3 control-label">Country*</label>
+            <label asp-for="Input.Country" class="col-sm-3 control-label"></label>
             <div class="col-sm-9">
-                <select asp-for="Input.Country.Id" asp-items="@Model.CountryList"></select>
-                @*@Html.DropDownListFor(m => m.CountryList, Model.CountryList)*@
+                <select asp-for="Input.Country" class="form-control">
+                    <option disabled selected>- - - Choose Country - - -</option>
+                    <vc:countries></vc:countries>
+                </select>
             </div>
         </div> <!-- /.form-group -->
 

@@ -18,6 +18,8 @@
     [AllowAnonymous]
     public class RegisterModel : PageModel
     {
+        private readonly JandayaDbContext dbContext;
+
         private readonly SignInManager<User> _signInManager;
         private readonly UserManager<User> _userManager;
         //private readonly ILogger<RegisterModel> _logger;
@@ -58,7 +60,7 @@
 
             [DataType(DataType.Password)]
             [Display(Name = "Confirm password")]
-            [Compare("Password", ErrorMessage = "The password and confirmation password do not match.")]
+            [Compare("Password", ErrorMessage = "The password and confirmation password do not maaatch.")]
             public string ConfirmPassword { get; set; }
 
             [DataType(DataType.Text)]
@@ -77,6 +79,8 @@
             [Required]
             [Display(Name = "Country")]
             public Country Country { get; set; }
+
+            public string CountryName { get; set; }
         }
 
         public void OnGet(string returnUrl = null)
@@ -95,6 +99,8 @@
         {
             returnUrl = returnUrl ?? Url.Content("~/");
 
+            var countryFromDb = dbContext.Countries.SingleOrDefault(s => s.Name == Input.CountryName);
+
             if (ModelState.IsValid)
             {
                 var user = new User
@@ -103,7 +109,7 @@
                     Email = Input.Email,
                     FirstName = Input.FirstName,
                     LastName = Input.LastName,
-                    Country = Input.Country,
+                    Country = countryFromDb,
                 };
                 var result = await _userManager.CreateAsync(user, Input.Password);
                 if (result.Succeeded)

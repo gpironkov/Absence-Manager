@@ -9,9 +9,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Jandaya.Data", "Jandaya.Dat
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Jandaya.Common", "Jandaya.Common\Jandaya.Common.csproj", "{E66426DE-825D-46CD-B64E-0C863359B0F0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Jandaya.Services", "Jandaya.Services\Jandaya.Services.csproj", "{B0E99B63-3EA9-4A1A-B434-8957498B164E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Jandaya.Services", "Jandaya.Services\Jandaya.Services.csproj", "{B0E99B63-3EA9-4A1A-B434-8957498B164E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Jandaya.Services.Mapping", "Jandaya.Services.Mapping\Jandaya.Services.Mapping.csproj", "{975D2859-8E96-4746-849A-E922A614506A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Jandaya.Services.Mapping", "Jandaya.Services.Mapping\Jandaya.Services.Mapping.csproj", "{975D2859-8E96-4746-849A-E922A614506A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{062D4924-F320-4E7A-AC5C-3C287EA75595}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Jandaya.Tests", "Tests\Jandaya.Tests\Jandaya.Tests.csproj", "{0EB436AC-983D-4B63-9F4A-906EDED0C899}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,9 +43,16 @@ Global
 		{975D2859-8E96-4746-849A-E922A614506A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{975D2859-8E96-4746-849A-E922A614506A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{975D2859-8E96-4746-849A-E922A614506A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0EB436AC-983D-4B63-9F4A-906EDED0C899}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0EB436AC-983D-4B63-9F4A-906EDED0C899}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0EB436AC-983D-4B63-9F4A-906EDED0C899}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0EB436AC-983D-4B63-9F4A-906EDED0C899}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{0EB436AC-983D-4B63-9F4A-906EDED0C899} = {062D4924-F320-4E7A-AC5C-3C287EA75595}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {EE9C9A4D-2906-4E65-9A37-F6E9194AC924}

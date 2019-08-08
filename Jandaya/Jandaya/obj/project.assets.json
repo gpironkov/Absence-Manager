@@ -13115,11 +13115,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\gpironkov\\source\\repos\\Jandaya\\Jandaya\\Jandaya.csproj",
+      "projectUniqueName": "C:\\Users\\gpironkov\\Desktop\\Georgi\\proj2\\Absence-Manager\\Jandaya\\Jandaya\\Jandaya.csproj",
       "projectName": "Jandaya",
-      "projectPath": "C:\\Users\\gpironkov\\source\\repos\\Jandaya\\Jandaya\\Jandaya.csproj",
+      "projectPath": "C:\\Users\\gpironkov\\Desktop\\Georgi\\proj2\\Absence-Manager\\Jandaya\\Jandaya\\Jandaya.csproj",
       "packagesPath": "C:\\Users\\gpironkov\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\gpironkov\\source\\repos\\Jandaya\\Jandaya\\obj\\",
+      "outputPath": "C:\\Users\\gpironkov\\Desktop\\Georgi\\proj2\\Absence-Manager\\Jandaya\\Jandaya\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -13138,14 +13138,14 @@
       "frameworks": {
         "netcoreapp2.2": {
           "projectReferences": {
-            "C:\\Users\\gpironkov\\source\\repos\\Jandaya\\Jandaya.Data\\Jandaya.Data.csproj": {
-              "projectPath": "C:\\Users\\gpironkov\\source\\repos\\Jandaya\\Jandaya.Data\\Jandaya.Data.csproj"
+            "C:\\Users\\gpironkov\\Desktop\\Georgi\\proj2\\Absence-Manager\\Jandaya\\Jandaya.Data\\Jandaya.Data.csproj": {
+              "projectPath": "C:\\Users\\gpironkov\\Desktop\\Georgi\\proj2\\Absence-Manager\\Jandaya\\Jandaya.Data\\Jandaya.Data.csproj"
             },
-            "C:\\Users\\gpironkov\\source\\repos\\Jandaya\\Jandaya.Services.Mapping\\Jandaya.Services.Mapping.csproj": {
-              "projectPath": "C:\\Users\\gpironkov\\source\\repos\\Jandaya\\Jandaya.Services.Mapping\\Jandaya.Services.Mapping.csproj"
+            "C:\\Users\\gpironkov\\Desktop\\Georgi\\proj2\\Absence-Manager\\Jandaya\\Jandaya.Services.Mapping\\Jandaya.Services.Mapping.csproj": {
+              "projectPath": "C:\\Users\\gpironkov\\Desktop\\Georgi\\proj2\\Absence-Manager\\Jandaya\\Jandaya.Services.Mapping\\Jandaya.Services.Mapping.csproj"
             },
-            "C:\\Users\\gpironkov\\source\\repos\\Jandaya\\Jandaya.Services\\Jandaya.Services.csproj": {
-              "projectPath": "C:\\Users\\gpironkov\\source\\repos\\Jandaya\\Jandaya.Services\\Jandaya.Services.csproj"
+            "C:\\Users\\gpironkov\\Desktop\\Georgi\\proj2\\Absence-Manager\\Jandaya\\Jandaya.Services\\Jandaya.Services.csproj": {
+              "projectPath": "C:\\Users\\gpironkov\\Desktop\\Georgi\\proj2\\Absence-Manager\\Jandaya\\Jandaya.Services\\Jandaya.Services.csproj"
             }
           }
         }

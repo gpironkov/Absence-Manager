@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\gpironkov\\source\\repos\\Jandaya\\Jandaya.Common\\Jandaya.Common.csproj": {}
+    "C:\\Users\\gpironkov\\Desktop\\Georgi\\proj2\\Absence-Manager\\Jandaya\\Jandaya.Common\\Jandaya.Common.csproj": {}
   },
   "projects": {
-    "C:\\Users\\gpironkov\\source\\repos\\Jandaya\\Jandaya.Common\\Jandaya.Common.csproj": {
+    "C:\\Users\\gpironkov\\Desktop\\Georgi\\proj2\\Absence-Manager\\Jandaya\\Jandaya.Common\\Jandaya.Common.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\gpironkov\\source\\repos\\Jandaya\\Jandaya.Common\\Jandaya.Common.csproj",
+        "projectUniqueName": "C:\\Users\\gpironkov\\Desktop\\Georgi\\proj2\\Absence-Manager\\Jandaya\\Jandaya.Common\\Jandaya.Common.csproj",
         "projectName": "Jandaya.Common",
-        "projectPath": "C:\\Users\\gpironkov\\source\\repos\\Jandaya\\Jandaya.Common\\Jandaya.Common.csproj",
+        "projectPath": "C:\\Users\\gpironkov\\Desktop\\Georgi\\proj2\\Absence-Manager\\Jandaya\\Jandaya.Common\\Jandaya.Common.csproj",
         "packagesPath": "C:\\Users\\gpironkov\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\gpironkov\\source\\repos\\Jandaya\\Jandaya.Common\\obj\\",
+        "outputPath": "C:\\Users\\gpironkov\\Desktop\\Georgi\\proj2\\Absence-Manager\\Jandaya\\Jandaya.Common\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

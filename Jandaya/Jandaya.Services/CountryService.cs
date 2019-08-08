@@ -21,13 +21,6 @@
             return countries;
         }
 
-        public IEnumerable<int> GetCountryIds()
-        {
-            var ids = this.dbContext.Countries.Select(x => x.Id).ToList();
-
-            return ids;
-        }
-
         //public IEnumerable<TViewModel> GetCountries<TViewModel>()
         //{
         //    var countries = this.dbContext.Countries
