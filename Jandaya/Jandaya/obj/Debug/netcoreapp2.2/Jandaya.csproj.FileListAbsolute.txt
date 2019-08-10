@@ -100,7 +100,6 @@ C:\Users\gpironkov\Desktop\Georgi\proj2\Absence-Manager\Jandaya\Jandaya\obj\Debu
 C:\Users\gpironkov\Desktop\Georgi\proj2\Absence-Manager\Jandaya\Jandaya\obj\Debug\netcoreapp2.2\Razor\Areas\Identity\Pages\_ViewImports.g.cshtml.cs
 C:\Users\gpironkov\Desktop\Georgi\proj2\Absence-Manager\Jandaya\Jandaya\obj\Debug\netcoreapp2.2\Razor\Areas\Identity\Pages\_ViewStart.g.cshtml.cs
 C:\Users\gpironkov\Desktop\Georgi\proj2\Absence-Manager\Jandaya\Jandaya\obj\Debug\netcoreapp2.2\Razor\Views\Home\Index.g.cshtml.cs
-C:\Users\gpironkov\Desktop\Georgi\proj2\Absence-Manager\Jandaya\Jandaya\obj\Debug\netcoreapp2.2\Razor\Views\Home\Privacy.g.cshtml.cs
 C:\Users\gpironkov\Desktop\Georgi\proj2\Absence-Manager\Jandaya\Jandaya\obj\Debug\netcoreapp2.2\Razor\Views\Shared\Components\Countries\Default.g.cshtml.cs
 C:\Users\gpironkov\Desktop\Georgi\proj2\Absence-Manager\Jandaya\Jandaya\obj\Debug\netcoreapp2.2\Razor\Views\Shared\Error.g.cshtml.cs
 C:\Users\gpironkov\Desktop\Georgi\proj2\Absence-Manager\Jandaya\Jandaya\obj\Debug\netcoreapp2.2\Razor\Views\Shared\_CookieConsentPartial.g.cshtml.cs
@@ -117,3 +116,7 @@ C:\Users\gpironkov\Desktop\Georgi\proj2\Absence-Manager\Jandaya\Jandaya\obj\Debu
 C:\Users\gpironkov\Desktop\Georgi\proj2\Absence-Manager\Jandaya\Jandaya\obj\Debug\netcoreapp2.2\Jandaya.dll
 C:\Users\gpironkov\Desktop\Georgi\proj2\Absence-Manager\Jandaya\Jandaya\obj\Debug\netcoreapp2.2\Jandaya.pdb
 C:\Users\gpironkov\Desktop\Georgi\proj2\Absence-Manager\Jandaya\Jandaya\obj\Debug\netcoreapp2.2\Razor\Views\User\Login.g.cshtml.cs
+C:\Users\gpironkov\Desktop\Georgi\proj2\Absence-Manager\Jandaya\Jandaya\obj\Debug\netcoreapp2.2\Razor\Views\UserManage\GetUserData.g.cshtml.cs
+C:\Users\gpironkov\Desktop\Georgi\proj2\Absence-Manager\Jandaya\Jandaya\obj\Debug\netcoreapp2.2\Razor\Views\CalendarManage\GetCalendar.g.cshtml.cs
+C:\Users\gpironkov\Desktop\Georgi\proj2\Absence-Manager\Jandaya\Jandaya\obj\Debug\netcoreapp2.2\Razor\Views\ResourceGroupsManage\ResourceGroups.g.cshtml.cs
+C:\Users\gpironkov\Desktop\Georgi\proj2\Absence-Manager\Jandaya\Jandaya\obj\Debug\netcoreapp2.2\Razor\Views\BookingTypesManage\BookingTypes.g.cshtml.cs

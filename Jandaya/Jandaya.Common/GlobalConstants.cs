@@ -8,6 +8,10 @@
 
         public const string EmployeeRoleName = "User";
 
+        public const string AdministratorRoleNameDb = "Administrator";
+
+        public const string EmployeeRoleNameDb = "Employee";
+
         public const string ModelError = "LoginError";
 
         public const string LoginError = "Username or password is not correct!";

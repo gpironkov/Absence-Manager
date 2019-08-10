@@ -2,6 +2,7 @@
 @model LoginUserViewModel
 @{
     ViewData["Title"] = "Login";
+    Layout = "~/Views/Shared/_Layout.cshtml";
     var error = ViewData[Jandaya.Common.GlobalConstants.ModelError];
 }
 
@@ -14,7 +15,6 @@
                 <p class="text-light">@error</p>
             }
             <form method="post" asp-action="Login" asp-controller="User">
-
                 <hr />
                 <div class="form-group">
                     <label asp-for="Username" class="d-flex justify-content-center text-dark "></label>
@@ -26,7 +26,6 @@
                     <input asp-for="Password" type="password" class="form-control" />
                     <span asp-validation-for="Password" class="text-danger"></span>
                 </div>
-                <hr class="h2 bg-BookCreator" />
                 <div class="d-flex justify-content-center">
                     <button type="submit" name="LoginButton" class="btn btn-lg btn-primary">Login</button>
                 </div>
