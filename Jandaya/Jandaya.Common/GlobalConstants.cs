@@ -3,7 +3,13 @@
     public static class GlobalConstants
     {
         public const string AdministratorRoleName = "Admin";
+
         public const string ManagerRoleName = "Manager";
+
         public const string EmployeeRoleName = "User";
+
+        public const string ModelError = "LoginError";
+
+        public const string LoginError = "Username or password is not correct!";
     }
 }

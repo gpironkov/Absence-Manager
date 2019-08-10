@@ -42,16 +42,17 @@
             var result = service.GetCountries();
 
 
-            Assert.All(result, item => Assert.Contains("Albania", item));
-            Assert.All(result, item => Assert.Contains("Bulgaria", item));
-            Assert.All(result, item => Assert.Contains("Germany", item));
+            //Assert.Collection<result>
+            //Assert.All(result, item => Assert.Contains("Albania", item));
+            //Assert.All(result, item => Assert.Contains("Bulgaria", item));
+            //Assert.All(result, item => Assert.Contains("Germany", item));
 
-            //foreach (var item in result)
-            //{
-            //    Assert.Contains("Albania", item);
-            //    Assert.Contains("Bulgaria", item);
-            //    Assert.Contains("Germany", item);
-            //}
+            foreach (var item in result)
+            {
+                Assert.Equal("Albania", item);
+                Assert.Equal("Bulgaria", item);
+                Assert.Equal("Germany", item);
+            }
         }
     }
 }

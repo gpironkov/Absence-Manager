@@ -1,12 +1,19 @@
 ﻿namespace Jandaya.Controllers
 {
     using Jandaya.Common;
+    using Jandaya.Services;
     using Jandaya.Data;
     using Jandaya.Data.Models;
+    using Jandaya.Data.Models.BindingModels;
+
     using Microsoft.AspNetCore.Identity;
     using Microsoft.AspNetCore.Mvc;
+    using Microsoft.AspNetCore.Authorization;
     using System.Linq;
     using System.Threading.Tasks;
+
+
+    using SignInResult = Microsoft.AspNetCore.Identity.SignInResult;
 
     public class UserController : Controller
     {
@@ -15,18 +22,25 @@
 
         private readonly JandayaDbContext dbContext;
 
+        public IUserServices UserService { get; }
+
         public UserController(JandayaDbContext dbContext, 
             UserManager<User> userManager, 
-            SignInManager<User> signInManager)
+            SignInManager<User> signInManager,
+            IUserServices userService)
         {
             this.dbContext = dbContext;
             this._userManager = userManager;
             this._signInManager = signInManager;
+            this.UserService = userService;
         }
 
+        [HttpGet]
+        [AllowAnonymous]
         public IActionResult Register() => View();
 
         [HttpPost]
+        [AllowAnonymous]
         public async Task<IActionResult> Register(CreateUserBindingModel createUserModel)
         {
             var returnUrl = "/Home/Index";
@@ -66,6 +80,30 @@
             }
 
             return Redirect("/");
+        }
+
+        [HttpGet]
+        [AllowAnonymous]
+        public IActionResult Login() => View();
+
+        [HttpPost]
+        [AllowAnonymous]
+        public IActionResult Login(LoginUserBindingModel loginUserModel)
+        {
+            if (!ModelState.IsValid)
+            {
+                return this.View(loginUserModel);
+            }
+
+            var result = this.UserService.LogUser(loginUserModel);
+
+            if (result != SignInResult.Success)
+            {
+                this.ViewData[GlobalConstants.ModelError] = GlobalConstants.LoginError;
+                return this.View(loginUserModel);
+            }
+
+            return RedirectToAction("Index", "Home");
         }
     }
 }

@@ -116,3 +116,4 @@ C:\Users\gpironkov\Desktop\Georgi\proj2\Absence-Manager\Jandaya\Jandaya\obj\Debu
 C:\Users\gpironkov\Desktop\Georgi\proj2\Absence-Manager\Jandaya\Jandaya\obj\Debug\netcoreapp2.2\Jandaya.csproj.CopyComplete
 C:\Users\gpironkov\Desktop\Georgi\proj2\Absence-Manager\Jandaya\Jandaya\obj\Debug\netcoreapp2.2\Jandaya.dll
 C:\Users\gpironkov\Desktop\Georgi\proj2\Absence-Manager\Jandaya\Jandaya\obj\Debug\netcoreapp2.2\Jandaya.pdb
+C:\Users\gpironkov\Desktop\Georgi\proj2\Absence-Manager\Jandaya\Jandaya\obj\Debug\netcoreapp2.2\Razor\Views\User\Login.g.cshtml.cs

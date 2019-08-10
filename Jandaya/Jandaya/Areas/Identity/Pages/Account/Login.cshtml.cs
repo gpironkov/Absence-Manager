@@ -70,11 +70,14 @@ namespace Jandaya.Areas.Identity.Pages.Account
         {
             returnUrl = returnUrl ?? Url.Content("~/");
 
+            //var user = this.Context.Users.FirstOrDefault(x => x.UserName == loginModel.Username);
+
             if (ModelState.IsValid)
             {
                 // This doesn't count login failures towards account lockout
                 // To enable password failures to trigger account lockout, set lockoutOnFailure: true
-                var result = await _signInManager.PasswordSignInAsync(Input.Email, Input.Password, Input.RememberMe, lockoutOnFailure: true);
+                var result = _signInManager.PasswordSignInAsync(Input.Email, Input.Password, true, false).Result;
+                //var result2 = this.SignInManager.PasswordSignInAsync(user, password, true, false).Result;
                 if (result.Succeeded)
                 {
                     _logger.LogInformation("User logged in.");

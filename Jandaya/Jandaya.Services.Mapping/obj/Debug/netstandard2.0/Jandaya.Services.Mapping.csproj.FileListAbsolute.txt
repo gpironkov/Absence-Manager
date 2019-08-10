@@ -10,7 +10,6 @@ C:\Users\gpironkov\source\repos\Jandaya\Jandaya.Services.Mapping\obj\Debug\netst
 C:\Users\gpironkov\Desktop\Georgi\proj2\Absence-Manager\Jandaya\Jandaya.Services.Mapping\bin\Debug\netstandard2.0\Jandaya.Services.Mapping.deps.json
 C:\Users\gpironkov\Desktop\Georgi\proj2\Absence-Manager\Jandaya\Jandaya.Services.Mapping\bin\Debug\netstandard2.0\Jandaya.Services.Mapping.dll
 C:\Users\gpironkov\Desktop\Georgi\proj2\Absence-Manager\Jandaya\Jandaya.Services.Mapping\bin\Debug\netstandard2.0\Jandaya.Services.Mapping.pdb
-C:\Users\gpironkov\Desktop\Georgi\proj2\Absence-Manager\Jandaya\Jandaya.Services.Mapping\obj\Debug\netstandard2.0\Jandaya.Services.Mapping.csprojAssemblyReference.cache
 C:\Users\gpironkov\Desktop\Georgi\proj2\Absence-Manager\Jandaya\Jandaya.Services.Mapping\obj\Debug\netstandard2.0\Jandaya.Services.Mapping.csproj.CoreCompileInputs.cache
 C:\Users\gpironkov\Desktop\Georgi\proj2\Absence-Manager\Jandaya\Jandaya.Services.Mapping\obj\Debug\netstandard2.0\Jandaya.Services.Mapping.AssemblyInfoInputs.cache
 C:\Users\gpironkov\Desktop\Georgi\proj2\Absence-Manager\Jandaya\Jandaya.Services.Mapping\obj\Debug\netstandard2.0\Jandaya.Services.Mapping.AssemblyInfo.cs
