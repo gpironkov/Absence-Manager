@@ -3,7 +3,7 @@
 
 @{
     ViewData["Title"] = "Register";
-    Layout = "~/Views/Shared/_Layout.cshtml";
+    //Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
 <link href="//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
@@ -81,6 +81,7 @@
                                 <option disabled selected>- - - Choose Country - - -</option>
                                 <vc:countries></vc:countries>
                             </select>
+                            <span asp-validation-for="Country" class="text-danger"></span>
                         </div>
                     </div>
                 </div> <!-- /.form-group -->
