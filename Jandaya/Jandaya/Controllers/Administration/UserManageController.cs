@@ -1,16 +1,22 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
-
-namespace Jandaya.Controllers.Administration
+﻿namespace Jandaya.Controllers.Administration
 {
-    public class UserManageController : Controller
+    using System.Threading.Tasks;
+    using Jandaya.Data.ViewModels;
+    using Jandaya.Services;
+    using Microsoft.AspNetCore.Mvc;
+
+    public class UserManageController : AdminController
     {
-        public IActionResult GetUserData()
+        private readonly IAdminService adminService;
+
+        public UserManageController(IAdminService adminService)
         {
-            return View();
+            this.adminService = adminService;
+        }
+        public async Task<IActionResult> GetUserData()
+        {
+            var activeUsers = await adminService.GetAllActiveUsers<UsersAllViewModel>();
+            return this.View(activeUsers);
         }
     }
 }

@@ -30,6 +30,6 @@
             var result = this.SignInManager.PasswordSignInAsync(user, password, true, false).Result;
 
             return result;
-        }
+        }        
     }
 }

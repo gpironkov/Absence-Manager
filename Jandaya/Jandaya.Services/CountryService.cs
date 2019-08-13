@@ -2,6 +2,7 @@
 {
     using Jandaya.Data;
     using Jandaya.Services.Mapping;
+    using Microsoft.EntityFrameworkCore.Internal;
     using System.Collections.Generic;
     using System.Linq;
 
@@ -20,6 +21,17 @@
 
             return countries;
         }
+
+        //     public string GetCountryById(int id)
+        //     {
+        //         var countryId = this.dbContext.Users.Select(x => x.CountryId);
+        //         var country = this.dbContext.Countries.Select(x => x.Name).Join(this.dbContext.Users u => u.)
+
+        //     select name 
+        //         from Country c
+        //         join Users u on u.CountryId = c.Id
+        //     }
+
 
         //public IEnumerable<TViewModel> GetCountries<TViewModel>()
         //{

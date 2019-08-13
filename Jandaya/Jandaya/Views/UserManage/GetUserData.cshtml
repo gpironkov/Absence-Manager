@@ -1,4 +1,5 @@
-﻿@{
+﻿@model  List<Jandaya.Data.ViewModels.UsersAllViewModel>
+@{
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
@@ -22,19 +23,25 @@
                     <th scope="col">Country</th>
                     <th scope="col">Role</th>
                     <th scope="col">Resource Group</th>
+                    @if (this.User.IsInRole("Admin"))
+                    {
+                        <th scope="col">Action</th>
+                    }
                 </tr>
             </thead>
-            <tbody id="myTable">
-                @for (int i = 0; i < 10; i++)
+            <tbody id="userTable">
+                @for (int i = 0; i < Model.Count; i++)
                 {
-                <tr>
-                    <td>Username</td>
-                    <td>Name</td>
-                    <td>Email</td>
-                    <td>Country</td>
-                    <td>Role</td>
-                    <td>Resource Group</td>
-                </tr>
+                    <tr>
+                        <td>@Model[i].UserName</td>
+                        <td>@Model[i].FullName</td>
+                        <td>@Model[i].Email</td>
+                        <td>@Model[i].Country</td>
+                        <td>Role</td>
+                        <td>@Model[i].ResourceGroup</td>
+                        <td>ManageUserRoles</td>
+                        @*<td><a asp-area="Administration" asp-action="ManageUserRoles" asp-route-id="@Model[i].Id" class="btn bg-transparent"><i class="fas fa-theater-masks" data-placement="top" title="Manage user roles"></i></a></td>*@
+                    </tr>
                 }
             </tbody>
         </table>
