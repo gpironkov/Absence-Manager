@@ -35,6 +35,7 @@
                     Configuration.GetConnectionString("DefaultConnection")));
 
             services.AddScoped<UserRolesSeeder>();
+            services.AddScoped<CountrySeeder>();            
 
             services.AddIdentity<User, Role>(options =>
             {
