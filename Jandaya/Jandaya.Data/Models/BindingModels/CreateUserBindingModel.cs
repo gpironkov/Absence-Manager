@@ -29,8 +29,6 @@
         [EmailAddress]
         public string Email { get; set; }
 
-        //public int CountryId { get; set; }
-
         [Required]
         public string Country { get; set; }
     }

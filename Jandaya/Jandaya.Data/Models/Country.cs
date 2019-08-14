@@ -11,5 +11,7 @@
         public string Name { get; set; }
 
         public List<User> Users { get; set; } = new List<User>();
+
+        public List<Calendar> Calendars { get; set; } = new List<Calendar>();
     }
 }

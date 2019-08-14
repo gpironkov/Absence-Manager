@@ -56,6 +56,7 @@
                     LastName = createUserModel.LastName,
                     Email = createUserModel.Email,
                     CountryId = countryFromDb.Id,
+                    DaysLeft = 20
                 };
 
                 //dbContext.Users.Add(user);

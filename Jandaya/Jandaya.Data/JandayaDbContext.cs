@@ -36,6 +36,8 @@
 
         public DbSet<ResourceGroup> ResourceGroups { get; set; }
 
+        public DbSet<Calendar> Calendars { get; set; }
+
         public override int SaveChanges() => this.SaveChanges(true);
 
         public override int SaveChanges(bool acceptAllChangesOnSuccess)
