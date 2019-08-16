@@ -117,6 +117,6 @@ C:\Users\gpironkov\Desktop\Georgi\proj2\Absence-Manager\Jandaya\Jandaya\obj\Debu
 C:\Users\gpironkov\Desktop\Georgi\proj2\Absence-Manager\Jandaya\Jandaya\obj\Debug\netcoreapp2.2\Jandaya.pdb
 C:\Users\gpironkov\Desktop\Georgi\proj2\Absence-Manager\Jandaya\Jandaya\obj\Debug\netcoreapp2.2\Razor\Views\User\Login.g.cshtml.cs
 C:\Users\gpironkov\Desktop\Georgi\proj2\Absence-Manager\Jandaya\Jandaya\obj\Debug\netcoreapp2.2\Razor\Views\UserManage\GetUserData.g.cshtml.cs
-C:\Users\gpironkov\Desktop\Georgi\proj2\Absence-Manager\Jandaya\Jandaya\obj\Debug\netcoreapp2.2\Razor\Views\CalendarManage\GetCalendar.g.cshtml.cs
 C:\Users\gpironkov\Desktop\Georgi\proj2\Absence-Manager\Jandaya\Jandaya\obj\Debug\netcoreapp2.2\Razor\Views\ResourceGroupsManage\ResourceGroups.g.cshtml.cs
 C:\Users\gpironkov\Desktop\Georgi\proj2\Absence-Manager\Jandaya\Jandaya\obj\Debug\netcoreapp2.2\Razor\Views\BookingTypesManage\BookingTypes.g.cshtml.cs
+C:\Users\gpironkov\Desktop\Georgi\proj2\Absence-Manager\Jandaya\Jandaya\obj\Debug\netcoreapp2.2\Razor\Views\CalendarManage\CreateHoliday.g.cshtml.cs

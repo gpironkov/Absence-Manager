@@ -24,7 +24,7 @@ namespace Jandaya.Data.Migrations
                     b.Property<string>("Id")
                         .ValueGeneratedOnAdd();
 
-                    b.Property<int>("BookingTypeId");
+                    b.Property<string>("BookingTypeId");
 
                     b.Property<string>("Comment")
                         .HasMaxLength(300);
@@ -52,9 +52,12 @@ namespace Jandaya.Data.Migrations
 
             modelBuilder.Entity("Jandaya.Data.Models.BookingType", b =>
                 {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+                    b.Property<string>("Id")
+                        .ValueGeneratedOnAdd();
+
+                    b.Property<DateTime>("CreatedOn");
+
+                    b.Property<DateTime?>("ModifiedOn");
 
                     b.Property<string>("Name")
                         .IsRequired()
@@ -67,17 +70,20 @@ namespace Jandaya.Data.Migrations
 
             modelBuilder.Entity("Jandaya.Data.Models.Calendar", b =>
                 {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+                    b.Property<string>("Id")
+                        .ValueGeneratedOnAdd();
 
                     b.Property<DateTime>("ChosenDate");
 
                     b.Property<int>("CountryId");
 
+                    b.Property<DateTime>("CreatedOn");
+
                     b.Property<string>("HolidayName");
 
                     b.Property<bool>("IsPublicHoliday");
+
+                    b.Property<DateTime?>("ModifiedOn");
 
                     b.HasKey("Id");
 
@@ -103,9 +109,12 @@ namespace Jandaya.Data.Migrations
 
             modelBuilder.Entity("Jandaya.Data.Models.ResourceGroup", b =>
                 {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+                    b.Property<string>("Id")
+                        .ValueGeneratedOnAdd();
+
+                    b.Property<DateTime>("CreatedOn");
+
+                    b.Property<DateTime?>("ModifiedOn");
 
                     b.Property<string>("Name")
                         .IsRequired()
@@ -199,7 +208,7 @@ namespace Jandaya.Data.Migrations
 
                     b.Property<bool>("PhoneNumberConfirmed");
 
-                    b.Property<int?>("ResourceGroupId");
+                    b.Property<string>("ResourceGroupId");
 
                     b.Property<string>("SecurityStamp");
 
@@ -315,8 +324,7 @@ namespace Jandaya.Data.Migrations
                 {
                     b.HasOne("Jandaya.Data.Models.BookingType", "BookingType")
                         .WithMany("Bookings")
-                        .HasForeignKey("BookingTypeId")
-                        .OnDelete(DeleteBehavior.Restrict);
+                        .HasForeignKey("BookingTypeId");
 
                     b.HasOne("Jandaya.Data.Models.User", "User")
                         .WithMany("Bookings")

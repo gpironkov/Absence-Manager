@@ -83,6 +83,7 @@
             services.AddTransient<ICountryService, CountryService>();
             services.AddTransient<IUserServices, UserServices>();
             services.AddTransient<IAdminService, AdminServices>();
+            services.AddTransient<ICalendarService, CalendarService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

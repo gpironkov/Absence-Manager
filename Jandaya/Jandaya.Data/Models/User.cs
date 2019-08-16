@@ -36,7 +36,7 @@
         [MaxLength(50)]
         public string LastName { get; set; }
 
-        public int? ResourceGroupId { get; set; }
+        public string ResourceGroupId { get; set; }
 
         public virtual ResourceGroup ResourceGroup { get; set; }
 

@@ -8,9 +8,9 @@
 
         public const string EmployeeRoleName = "User";
 
-        public const string AdministratorRoleNameDb = "Administrator";
+        //public const string AdministratorRoleNameDb = "Administrator";
 
-        public const string EmployeeRoleNameDb = "Employee";
+        //public const string EmployeeRoleNameDb = "Employee";
 
         public const string ModelError = "LoginError";
 

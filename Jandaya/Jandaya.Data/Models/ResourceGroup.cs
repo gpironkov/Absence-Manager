@@ -1,10 +1,15 @@
 ﻿namespace Jandaya.Data.Models
 {
+    using Jandaya.Data.Models.Common;
+    using System;
     using System.Collections.Generic;
     using System.ComponentModel.DataAnnotations;
-    public class ResourceGroup
+    public class ResourceGroup : BaseModel<string>
     {
-        public int Id { get; set; }
+        public ResourceGroup()
+        {
+            this.Id = Guid.NewGuid().ToString();
+        }
 
         [Required]
         [MaxLength(100)]

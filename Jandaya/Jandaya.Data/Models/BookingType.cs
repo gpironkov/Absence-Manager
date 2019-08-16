@@ -1,10 +1,16 @@
 ﻿namespace Jandaya.Data.Models
 {
+    using Jandaya.Data.Models.Common;
+    using System;
     using System.Collections.Generic;
     using System.ComponentModel.DataAnnotations;
-    public class BookingType
+
+    public class BookingType : BaseModel<string>
     {
-        public int Id { get; set; }
+        public BookingType()
+        {
+            this.Id = Guid.NewGuid().ToString();
+        }
 
         [Required]
         [MaxLength(50)]

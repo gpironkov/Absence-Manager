@@ -17,7 +17,7 @@
 
         public virtual User User { get; set; }
 
-        public int BookingTypeId { get; set; }
+        public string BookingTypeId { get; set; }
 
         public virtual BookingType BookingType { get; set; }
 

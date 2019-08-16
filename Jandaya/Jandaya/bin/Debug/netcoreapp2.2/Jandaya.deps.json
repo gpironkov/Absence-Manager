@@ -1,7 +1,7 @@
 {
   "runtimeTarget": {
     "name": ".NETCoreApp,Version=v2.2",
-    "signature": "b99bb8b7f4ab40aa84b21da5907bb0043821daa3"
+    "signature": "0e9521d54c590af9a360dd82e4cf2daaf49e3f40"
   },
   "compilationOptions": {
     "defines": [
@@ -24,13 +24,15 @@
     ".NETCoreApp,Version=v2.2": {
       "Jandaya/1.0.0": {
         "dependencies": {
+          "BuildBundlerMinifier": "2.9.406",
           "Jandaya.Data": "1.0.0",
           "Jandaya.Services": "1.0.0",
           "Jandaya.Services.Mapping": "1.0.0",
           "Microsoft.AspNetCore.App": "2.2.0",
           "Microsoft.AspNetCore.Razor.Design": "2.2.0",
           "Microsoft.NETCore.App": "2.2.0",
-          "Microsoft.VisualStudio.Web.CodeGeneration.Design": "2.2.3"
+          "Microsoft.VisualStudio.Web.CodeGeneration.Design": "2.2.3",
+          "Microsoft.Web.LibraryManager.Build": "2.0.76"
         },
         "runtime": {
           "Jandaya.dll": {}
@@ -54,6 +56,7 @@
           "lib/netstandard2.0/AutoMapper.dll": {}
         }
       },
+      "BuildBundlerMinifier/2.9.406": {},
       "Microsoft.CodeAnalysis.CSharp.Workspaces/2.8.0": {
         "dependencies": {
           "Microsoft.CodeAnalysis.CSharp": "2.8.0",
@@ -286,6 +289,11 @@
         },
         "compile": {
           "lib/netstandard2.0/Microsoft.VisualStudio.Web.CodeGenerators.Mvc.dll": {}
+        }
+      },
+      "Microsoft.Web.LibraryManager.Build/2.0.76": {
+        "dependencies": {
+          "System.Runtime.Loader": "4.3.0"
         }
       },
       "NuGet.Frameworks/4.7.0": {
@@ -549,6 +557,13 @@
           "System.Reflection": "4.3.0",
           "System.Reflection.Extensions": "4.3.0",
           "System.Resources.ResourceManager": "4.3.0",
+          "System.Runtime": "4.3.0"
+        }
+      },
+      "System.Runtime.Loader/4.3.0": {
+        "dependencies": {
+          "System.IO": "4.3.0",
+          "System.Reflection": "4.3.0",
           "System.Runtime": "4.3.0"
         }
       },
@@ -3695,6 +3710,13 @@
       "path": "automapper/8.1.1",
       "hashPath": "automapper.8.1.1.nupkg.sha512"
     },
+    "BuildBundlerMinifier/2.9.406": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-jNgso4DDVEDTmM2O41WWI8OMC5CV0yMqMK/cRMJldO64XzC2PDdg+FV/GHqN6qh3KDuTKcDlB/t7F2WBWrNOgQ==",
+      "path": "buildbundlerminifier/2.9.406",
+      "hashPath": "buildbundlerminifier.2.9.406.nupkg.sha512"
+    },
     "Microsoft.CodeAnalysis.CSharp.Workspaces/2.8.0": {
       "type": "package",
       "serviceable": true,
@@ -3806,6 +3828,13 @@
       "sha512": "sha512-0gVuA4KUCHFM4M/9SjG+7j7BzZ7SW/BufF97Q78i2VV8JBbQXc/5Rf6YUG1VGW2fwSEOl9+S26utEGS+86GGGw==",
       "path": "microsoft.visualstudio.web.codegenerators.mvc/2.2.3",
       "hashPath": "microsoft.visualstudio.web.codegenerators.mvc.2.2.3.nupkg.sha512"
+    },
+    "Microsoft.Web.LibraryManager.Build/2.0.76": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-hD6E6O2QYNvkbjamuQTbocHvBXuzGbQIVTzUYHGL5tO9+zFbWUsfdzNp3+PDQBMrbEt8S5qVBaCs5Hm/WbFN/w==",
+      "path": "microsoft.web.librarymanager.build/2.0.76",
+      "hashPath": "microsoft.web.librarymanager.build.2.0.76.nupkg.sha512"
     },
     "NuGet.Frameworks/4.7.0": {
       "type": "package",
@@ -3925,6 +3954,13 @@
       "sha512": "sha512-Yn/WfYe9RoRfmSLvUt2JerP0BTGGykCZkQPgojaxgzF2N0oPo+/AhB8TXOpdCcNlrG3VRtsamtK2uzsp3cqRVw==",
       "path": "system.linq.queryable/4.0.1",
       "hashPath": "system.linq.queryable.4.0.1.nupkg.sha512"
+    },
+    "System.Runtime.Loader/4.3.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-DHMaRn8D8YCK2GG2pw+UzNxn/OHVfaWx7OTLBD/hPegHZZgcZh3H6seWegrC4BYwsfuGrywIuT+MQs+rPqRLTQ==",
+      "path": "system.runtime.loader/4.3.0",
+      "hashPath": "system.runtime.loader.4.3.0.nupkg.sha512"
     },
     "System.Text.Encoding.CodePages/4.5.0": {
       "type": "package",

@@ -15,3 +15,4 @@ C:\Users\gpironkov\Desktop\Georgi\proj2\Absence-Manager\Jandaya\Jandaya.Services
 C:\Users\gpironkov\Desktop\Georgi\proj2\Absence-Manager\Jandaya\Jandaya.Services.Mapping\obj\Debug\netstandard2.0\Jandaya.Services.Mapping.AssemblyInfo.cs
 C:\Users\gpironkov\Desktop\Georgi\proj2\Absence-Manager\Jandaya\Jandaya.Services.Mapping\obj\Debug\netstandard2.0\Jandaya.Services.Mapping.dll
 C:\Users\gpironkov\Desktop\Georgi\proj2\Absence-Manager\Jandaya\Jandaya.Services.Mapping\obj\Debug\netstandard2.0\Jandaya.Services.Mapping.pdb
+C:\Users\gpironkov\Desktop\Georgi\proj2\Absence-Manager\Jandaya\Jandaya.Services.Mapping\obj\Debug\netstandard2.0\Jandaya.Services.Mapping.csprojAssemblyReference.cache

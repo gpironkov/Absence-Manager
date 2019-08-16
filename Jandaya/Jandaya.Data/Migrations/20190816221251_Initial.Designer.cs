@@ -10,8 +10,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Jandaya.Data.Migrations
 {
     [DbContext(typeof(JandayaDbContext))]
-    [Migration("20190724094937_Initial3")]
-    partial class Initial3
+    [Migration("20190816221251_Initial")]
+    partial class Initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -26,7 +26,7 @@ namespace Jandaya.Data.Migrations
                     b.Property<string>("Id")
                         .ValueGeneratedOnAdd();
 
-                    b.Property<int>("BookingTypeId");
+                    b.Property<string>("BookingTypeId");
 
                     b.Property<string>("Comment")
                         .HasMaxLength(300);
@@ -54,9 +54,12 @@ namespace Jandaya.Data.Migrations
 
             modelBuilder.Entity("Jandaya.Data.Models.BookingType", b =>
                 {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+                    b.Property<string>("Id")
+                        .ValueGeneratedOnAdd();
+
+                    b.Property<DateTime>("CreatedOn");
+
+                    b.Property<DateTime?>("ModifiedOn");
 
                     b.Property<string>("Name")
                         .IsRequired()
@@ -65,6 +68,30 @@ namespace Jandaya.Data.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("BookingTypes");
+                });
+
+            modelBuilder.Entity("Jandaya.Data.Models.Calendar", b =>
+                {
+                    b.Property<string>("Id")
+                        .ValueGeneratedOnAdd();
+
+                    b.Property<DateTime>("ChosenDate");
+
+                    b.Property<int>("CountryId");
+
+                    b.Property<DateTime>("CreatedOn");
+
+                    b.Property<string>("HolidayName");
+
+                    b.Property<bool>("IsPublicHoliday");
+
+                    b.Property<DateTime?>("ModifiedOn");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("CountryId");
+
+                    b.ToTable("Calendars");
                 });
 
             modelBuilder.Entity("Jandaya.Data.Models.Country", b =>
@@ -84,9 +111,12 @@ namespace Jandaya.Data.Migrations
 
             modelBuilder.Entity("Jandaya.Data.Models.ResourceGroup", b =>
                 {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+                    b.Property<string>("Id")
+                        .ValueGeneratedOnAdd();
+
+                    b.Property<DateTime>("CreatedOn");
+
+                    b.Property<DateTime?>("ModifiedOn");
 
                     b.Property<string>("Name")
                         .IsRequired()
@@ -136,8 +166,6 @@ namespace Jandaya.Data.Migrations
 
                     b.Property<int>("AccessFailedCount");
 
-                    b.Property<int>("BookingId");
-
                     b.Property<string>("ConcurrencyStamp")
                         .IsConcurrencyToken();
 
@@ -182,7 +210,7 @@ namespace Jandaya.Data.Migrations
 
                     b.Property<bool>("PhoneNumberConfirmed");
 
-                    b.Property<int>("ResourceGroupId");
+                    b.Property<string>("ResourceGroupId");
 
                     b.Property<string>("SecurityStamp");
 
@@ -250,11 +278,9 @@ namespace Jandaya.Data.Migrations
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserLogin<string>", b =>
                 {
-                    b.Property<string>("LoginProvider")
-                        .HasMaxLength(128);
+                    b.Property<string>("LoginProvider");
 
-                    b.Property<string>("ProviderKey")
-                        .HasMaxLength(128);
+                    b.Property<string>("ProviderKey");
 
                     b.Property<string>("ProviderDisplayName");
 
@@ -285,11 +311,9 @@ namespace Jandaya.Data.Migrations
                 {
                     b.Property<string>("UserId");
 
-                    b.Property<string>("LoginProvider")
-                        .HasMaxLength(128);
+                    b.Property<string>("LoginProvider");
 
-                    b.Property<string>("Name")
-                        .HasMaxLength(128);
+                    b.Property<string>("Name");
 
                     b.Property<string>("Value");
 
@@ -302,12 +326,19 @@ namespace Jandaya.Data.Migrations
                 {
                     b.HasOne("Jandaya.Data.Models.BookingType", "BookingType")
                         .WithMany("Bookings")
-                        .HasForeignKey("BookingTypeId")
-                        .OnDelete(DeleteBehavior.Restrict);
+                        .HasForeignKey("BookingTypeId");
 
                     b.HasOne("Jandaya.Data.Models.User", "User")
                         .WithMany("Bookings")
                         .HasForeignKey("UserId");
+                });
+
+            modelBuilder.Entity("Jandaya.Data.Models.Calendar", b =>
+                {
+                    b.HasOne("Jandaya.Data.Models.Country", "Country")
+                        .WithMany("Calendars")
+                        .HasForeignKey("CountryId")
+                        .OnDelete(DeleteBehavior.Restrict);
                 });
 
             modelBuilder.Entity("Jandaya.Data.Models.User", b =>
@@ -319,8 +350,7 @@ namespace Jandaya.Data.Migrations
 
                     b.HasOne("Jandaya.Data.Models.ResourceGroup", "ResourceGroup")
                         .WithMany("Users")
-                        .HasForeignKey("ResourceGroupId")
-                        .OnDelete(DeleteBehavior.Restrict);
+                        .HasForeignKey("ResourceGroupId");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>

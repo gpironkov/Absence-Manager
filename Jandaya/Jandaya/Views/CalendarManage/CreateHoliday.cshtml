@@ -1,0 +1,87 @@
+﻿@using Jandaya.Data.ViewModels
+@model AddNewHolidayViewModel
+@{
+    ViewData["Title"] = "Add New Holiday";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="text-center">
+    <div>
+        <br />
+        <a class="btn btn-outline-primary btn-lg" asp-controller="UserManage" asp-action="GetUserData">Manage Users</a>
+        <a class="btn btn-outline-primary btn-lg" asp-controller="CalendarManage" asp-action="CreateHoliday">Manage Calendar by Country</a>
+        <a class="btn btn-outline-primary btn-lg" asp-controller="ResourceGroupsManage" asp-action="ResourceGroups">Manage Resource Groups</a>
+        <a class="btn btn-outline-primary btn-lg" asp-controller="BookingTypesManage" asp-action="BookingTypes">Manage Booking Types</a>
+    </div>
+</div>
+<br />
+<div class="jumbotron">
+    <div class="row justify-content-center">
+        <div class="col-md-10">
+            <h2 class="d-flex justify-content-center text-dark">@ViewData["Title"]</h2>
+            <br />
+            <form class="form-horizontal w-75" method="post" asp-action="CreateHoliday" asp-controller="CalendarManage">
+                <div class="form-group">
+                    <div class="d-flex justify-content-center">
+                        <label asp-for="@Model.Country" class="col-sm-2 control-label"></label>
+                        <div class="col-sm-7">
+                            <select asp-for="Country" class="form-control">
+                                <option disabled selected>- - - Choose Country - - -</option>
+                                <vc:countries></vc:countries>
+                            </select>
+                            <span asp-validation-for="Country" class="text-danger"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="d-flex justify-content-center">
+                        <label asp-for="@Model.ChosenDate" class="col-sm-2 control-label"></label>
+                        <div class="form-group input-group col-sm-7">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text"> <i class="fas fa-calendar-alt"></i></span>
+                            </div>
+                            <input asp-for="@Model.ChosenDate" autocomplete="off" id="startDate" class="form-control" placeholder="dd/MM/yyyy" />
+                        </div>
+                        <span asp-validation-for="@Model.ChosenDate" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="d-flex justify-content-center">
+                        <label asp-for="@Model.HolidayName" class="col-sm-2 control-label"></label>
+                        <div class="col-sm-7">
+                            <input asp-for="@Model.HolidayName" class="form-control" type="text" />
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="checkbox d-flex justify-content-center">
+                        <label class="col-sm-2 control-label" asp-for="@Model.IsPublicHoliday"></label>
+                        <div class="col-sm-7">
+                            <input asp-for="@Model.IsPublicHoliday" />
+                        </div>
+                        @*@Html.DisplayNameFor(m => m.IsPublicHoliday)*@
+                    </div>
+                </div>
+                <hr class="mt-3 bg-resources hr-2" />
+                <div class="d-flex justify-content-center">
+                    <button type="submit" class="btn btn-primary btn-block w-75">Create holiday</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+@*@section scripts{
+        <script type="text/javascript" src="~/js/jquery.datetimepicker.full.min.js"></script>
+        <script>
+        window.onload = () => {
+                $('#startDate').datetimepicker({
+                    timepicker: false,
+                    format: 'd/m/Y',
+                    minDate: '-1970/01/01',
+                    lang: 'en',
+                    todayButton: true,
+                    dayOfWeekStart: '1',
+                });
+            };</script>
+    }*@

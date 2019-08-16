@@ -8,7 +8,7 @@
 
     public class UserServices : IUserServices
     {
-        private JandayaDbContext dbContext;
+        private readonly JandayaDbContext dbContext;
         protected SignInManager<User> SignInManager { get; } //SignInManager<JandayaUserModel>
 
         public UserServices(JandayaDbContext dbContext, SignInManager<User> SignInManager)

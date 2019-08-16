@@ -9,7 +9,7 @@
 
     public class AdminServices : IAdminService
     {
-        private JandayaDbContext dbContext;
+        private readonly JandayaDbContext dbContext;
 
         public AdminServices(JandayaDbContext dbContext)
         {

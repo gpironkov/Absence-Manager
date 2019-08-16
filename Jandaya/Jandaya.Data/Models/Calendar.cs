@@ -1,14 +1,15 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.Text;
-
-namespace Jandaya.Data.Models
+﻿namespace Jandaya.Data.Models
 {
-    public class Calendar
+    using Jandaya.Data.Models.Common;
+    using System;
+    using System.ComponentModel.DataAnnotations;
+
+    public class Calendar : BaseModel<string>
     {
-        [Required]
-        public int Id { get; set; }
+        public Calendar()
+        {
+            this.Id = Guid.NewGuid().ToString();
+        }
 
         [Required]
         public DateTime ChosenDate { get; set; }
