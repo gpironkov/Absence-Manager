@@ -7,9 +7,9 @@
     {
         public string Country { get; set; }
 
+        [Required]
+        [DataType(DataType.Text)]
         public DateTime ChosenDate { get; set; }
-
-        //public int Id { get; set; }
 
         public string HolidayName { get; set; }
 

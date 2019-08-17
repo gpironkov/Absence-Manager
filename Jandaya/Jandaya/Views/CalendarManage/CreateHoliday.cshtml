@@ -25,11 +25,11 @@
                     <div class="d-flex justify-content-center">
                         <label asp-for="@Model.Country" class="col-sm-2 control-label"></label>
                         <div class="col-sm-7">
-                            <select asp-for="Country" class="form-control">
+                            <select asp-for="@Model.Country" class="form-control">
                                 <option disabled selected>- - - Choose Country - - -</option>
                                 <vc:countries></vc:countries>
                             </select>
-                            <span asp-validation-for="Country" class="text-danger"></span>
+                            <span asp-validation-for="@Model.Country" class="text-danger"></span>
                         </div>
                     </div>
                 </div>

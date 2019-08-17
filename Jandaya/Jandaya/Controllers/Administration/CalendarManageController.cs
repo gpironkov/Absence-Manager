@@ -11,7 +11,6 @@
 
     public class CalendarManageController : Controller
     {
-        //private readonly JandayaDbContext dbContext;
         public ICalendarService CalendarService { get; }
 
         public CalendarManageController(ICalendarService calendarService)
@@ -22,15 +21,14 @@
         public IActionResult CreateHoliday() => View();
 
         [HttpPost]
-        public IActionResult CreateHoliday(AddNewHolidayBindingModel bindingModel)
+        public async Task<IActionResult> CreateHoliday(AddNewHolidayBindingModel bindingModel)
         {
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState.Values.SelectMany(v => v.Errors).Select(error => error.ErrorMessage));
-                //return this.View(bindingModel ?? new AddNewHolidayBindingModel());
             }
 
-            this.CalendarService.CreateHoliday(bindingModel);
+            await this.CalendarService.CreateHoliday(bindingModel);
 
             return Redirect("/");
         }
