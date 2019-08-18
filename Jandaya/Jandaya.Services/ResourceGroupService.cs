@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Jandaya.Data;
@@ -27,6 +28,13 @@ namespace Jandaya.Services
             var result = await this.dbContext.SaveChangesAsync();
 
             return result > 0;
+        }
+
+        public IEnumerable<string> GetResourceGroups()
+        {
+            var resourceGroups = this.dbContext.ResourceGroups.Select(x => x.Name).ToList();
+
+            return resourceGroups;
         }
     }
 }

@@ -20,12 +20,15 @@
         {
             var activeUsers = this.dbContext.Users
                 .Include(u => u.Roles)
+                .Include(u => u.Country)
                 .Where(u => u.IsDeleted == false)
                 .OrderBy(u => u.FirstName)
                 .ThenBy(u => u.LastName);
 
             foreach (var user in activeUsers)
             {
+                //user.Country.Name = await GetContryNameById(user.CountryId);
+
                 foreach (var role in user.Roles)
                 {
                     var roleName = await this.GetRoleNameById(role.RoleId);
@@ -44,5 +47,14 @@
 
             return Task.FromResult(userRoleName);
         }
+
+        //public Task<string> GetContryNameById(int countryId)
+        //{
+        //    var countryName = this.dbContext.Countries
+        //        .FirstOrDefault(c => c.Id == countryId)
+        //        .Name;
+
+        //    return Task.FromResult(countryName);
+        //}
     }
 }

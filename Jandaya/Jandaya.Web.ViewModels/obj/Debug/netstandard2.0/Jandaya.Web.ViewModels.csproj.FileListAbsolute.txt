@@ -1,0 +1,16 @@
+C:\Users\gpironkov\Desktop\Georgi\proj2\Absence-Manager\Jandaya\Jandaya.Web.ViewModels\bin\Debug\netstandard2.0\Jandaya.Web.ViewModels.deps.json
+C:\Users\gpironkov\Desktop\Georgi\proj2\Absence-Manager\Jandaya\Jandaya.Web.ViewModels\bin\Debug\netstandard2.0\Jandaya.Web.ViewModels.dll
+C:\Users\gpironkov\Desktop\Georgi\proj2\Absence-Manager\Jandaya\Jandaya.Web.ViewModels\bin\Debug\netstandard2.0\Jandaya.Web.ViewModels.pdb
+C:\Users\gpironkov\Desktop\Georgi\proj2\Absence-Manager\Jandaya\Jandaya.Web.ViewModels\bin\Debug\netstandard2.0\Jandaya.Common.dll
+C:\Users\gpironkov\Desktop\Georgi\proj2\Absence-Manager\Jandaya\Jandaya.Web.ViewModels\bin\Debug\netstandard2.0\Jandaya.Data.dll
+C:\Users\gpironkov\Desktop\Georgi\proj2\Absence-Manager\Jandaya\Jandaya.Web.ViewModels\bin\Debug\netstandard2.0\Jandaya.Services.Mapping.dll
+C:\Users\gpironkov\Desktop\Georgi\proj2\Absence-Manager\Jandaya\Jandaya.Web.ViewModels\bin\Debug\netstandard2.0\Jandaya.Data.pdb
+C:\Users\gpironkov\Desktop\Georgi\proj2\Absence-Manager\Jandaya\Jandaya.Web.ViewModels\bin\Debug\netstandard2.0\Jandaya.Services.Mapping.pdb
+C:\Users\gpironkov\Desktop\Georgi\proj2\Absence-Manager\Jandaya\Jandaya.Web.ViewModels\bin\Debug\netstandard2.0\Jandaya.Common.pdb
+C:\Users\gpironkov\Desktop\Georgi\proj2\Absence-Manager\Jandaya\Jandaya.Web.ViewModels\obj\Debug\netstandard2.0\Jandaya.Web.ViewModels.csprojAssemblyReference.cache
+C:\Users\gpironkov\Desktop\Georgi\proj2\Absence-Manager\Jandaya\Jandaya.Web.ViewModels\obj\Debug\netstandard2.0\Jandaya.Web.ViewModels.csproj.CoreCompileInputs.cache
+C:\Users\gpironkov\Desktop\Georgi\proj2\Absence-Manager\Jandaya\Jandaya.Web.ViewModels\obj\Debug\netstandard2.0\Jandaya.Web.ViewModels.AssemblyInfoInputs.cache
+C:\Users\gpironkov\Desktop\Georgi\proj2\Absence-Manager\Jandaya\Jandaya.Web.ViewModels\obj\Debug\netstandard2.0\Jandaya.Web.ViewModels.AssemblyInfo.cs
+C:\Users\gpironkov\Desktop\Georgi\proj2\Absence-Manager\Jandaya\Jandaya.Web.ViewModels\obj\Debug\netstandard2.0\Jandaya.Web.ViewModels.csproj.CopyComplete
+C:\Users\gpironkov\Desktop\Georgi\proj2\Absence-Manager\Jandaya\Jandaya.Web.ViewModels\obj\Debug\netstandard2.0\Jandaya.Web.ViewModels.dll
+C:\Users\gpironkov\Desktop\Georgi\proj2\Absence-Manager\Jandaya\Jandaya.Web.ViewModels\obj\Debug\netstandard2.0\Jandaya.Web.ViewModels.pdb

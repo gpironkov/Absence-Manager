@@ -1,7 +1,7 @@
 ﻿namespace Jandaya.Controllers.Administration
 {
     using System.Threading.Tasks;
-    using Jandaya.Data.ViewModels;
+    using Jandaya.Models;
     using Jandaya.Services;
     using Microsoft.AspNetCore.Mvc;
 

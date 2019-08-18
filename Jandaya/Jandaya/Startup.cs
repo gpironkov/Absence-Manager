@@ -8,9 +8,10 @@
     using Microsoft.AspNetCore.Http;
     using Microsoft.AspNetCore.Mvc;
     using Microsoft.EntityFrameworkCore;
-    using Jandaya.Data;
     using Microsoft.Extensions.Configuration;
     using Microsoft.Extensions.DependencyInjection;
+
+    using Jandaya.Data;
     using Jandaya.Data.Models;
     using Jandaya.Data.Seeding;
     using Jandaya.Extensions;

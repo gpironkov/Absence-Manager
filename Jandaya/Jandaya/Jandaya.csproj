@@ -17,6 +17,7 @@
 
 
   <ItemGroup>
+    <ProjectReference Include="..\Jandaya.Common\Jandaya.Common.csproj" />
     <ProjectReference Include="..\Jandaya.Data\Jandaya.Data.csproj" />
     <ProjectReference Include="..\Jandaya.Services.Mapping\Jandaya.Services.Mapping.csproj" />
     <ProjectReference Include="..\Jandaya.Services\Jandaya.Services.csproj" />

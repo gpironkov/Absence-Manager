@@ -25,6 +25,7 @@
       "Jandaya/1.0.0": {
         "dependencies": {
           "BuildBundlerMinifier": "2.9.406",
+          "Jandaya.Common": "1.0.0",
           "Jandaya.Data": "1.0.0",
           "Jandaya.Services": "1.0.0",
           "Jandaya.Services.Mapping": "1.0.0",

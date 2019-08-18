@@ -1,5 +1,3 @@
-using System;
-
 namespace Jandaya.Models
 {
     public class ErrorViewModel

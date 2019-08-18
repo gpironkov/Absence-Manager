@@ -1,0 +1,18 @@
+﻿@model Jandaya.ViewComponents.ResourceGroupViewComponentViewModel
+
+<table>
+    <tr>
+        <td>
+            <h5 style="font-weight:bold">Resource groups:</h5>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            @foreach (var item in @Model.Name)
+            {
+                <label>@item</label>
+                <br />
+            }
+        </td>
+    </tr>
+</table>

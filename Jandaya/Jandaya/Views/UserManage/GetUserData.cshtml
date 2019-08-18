@@ -1,4 +1,5 @@
-﻿@model List<Jandaya.Data.ViewModels.UsersAllViewModel>
+﻿@using Jandaya.Common
+@model List<Jandaya.Models.UsersAllViewModel>
 @{
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
@@ -7,7 +8,7 @@
     <div>
         <br />
         <a class="btn btn-outline-primary btn-lg" asp-controller="UserManage" asp-action="GetUserData">Manage Users</a>
-        <a class="btn btn-outline-primary btn-lg" asp-controller="CalendarManage" asp-action="GetCalendar">Manage Calendar by Country</a>
+        <a class="btn btn-outline-primary btn-lg" asp-controller="CalendarManage" asp-action="CreateHoliday">Manage Calendar by Country</a>
         <a class="btn btn-outline-primary btn-lg" asp-controller="ResourceGroupsManage" asp-action="ResourceGroups">Manage Resource Groups</a>
         <a class="btn btn-outline-primary btn-lg" asp-controller="BookingTypesManage" asp-action="BookingTypes">Manage Booking Types</a>
     </div>
@@ -20,13 +21,13 @@
                     <th scope="col">Username</th>
                     <th scope="col">Name</th>
                     <th scope="col">Email</th>
-                    @*<th scope="col">Country</th>*@
+                    <th scope="col">Country</th>
                     <th scope="col">Role</th>
-                    @*<th scope="col">Resource Group</th>
-                    @if (this.User.IsInRole("Admin"))
-                    {
-                        <th scope="col">Action</th>
-                    }*@
+                    <th scope="col">Resource Group</th>
+                        @*if (this.User.IsInRole("Admin"))
+                        {
+                            <th scope="col">Action</th>
+                        }*@
                 </tr>
             </thead>
             <tbody id="userTable">
@@ -36,9 +37,22 @@
                         <td>@Model[i].UserName</td>
                         <td>@Model[i].FullName</td>
                         <td>@Model[i].Email</td>
-                        @*<td>@Model[i].Country</td>*@
-                        <td>@Model[i].Roles</td>
-                        @*<td>@Model[i].ResourceGroup</td>*@
+                        <td>@Model[i].Country</td>
+                        <td>
+                            @if (Model[i].Roles.Any(x => x.RoleId == GlobalConstants.AdministratorRoleName))
+                            {
+                                <label>@GlobalConstants.AdministratorRoleName</label>
+                            }
+                            @if (Model[i].Roles.Any(x => x.RoleId == GlobalConstants.ManagerRoleName))
+                            {
+                                <label>@GlobalConstants.ManagerRoleName</label>
+                            }
+                            @if (Model[i].Roles.Any(x => x.RoleId == GlobalConstants.EmployeeRoleName))
+                            {
+                                <label>@GlobalConstants.EmployeeRoleName</label>
+                            }
+                        </td>
+                        <td>@Model[i].ResourceGroup</td>
                         @*<td>ManageUserRoles</td>*@
                         @*<td><a asp-area="Administration" asp-action="ManageUserRoles" asp-route-id="@Model[i].Id" class="btn bg-transparent"><i class="fas fa-theater-masks" data-placement="top" title="Manage user roles"></i></a></td>*@
                     </tr>

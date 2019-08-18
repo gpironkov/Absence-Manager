@@ -1,29 +1,27 @@
-﻿namespace Jandaya.Data.ViewModels
+﻿namespace Jandaya.Models
 {
-    using System;
-    using System.Collections.Generic;
-    using System.ComponentModel.DataAnnotations;
-    using System.Globalization;
-
     using AutoMapper;
     using Jandaya.Data.Models;
     using Jandaya.Services.Mapping;
     using Microsoft.AspNetCore.Identity;
+    using System.Collections.Generic;
 
-    public class UsersAllViewModel : IMapFrom<User>, IMapFrom<IdentityUserRole<string>>, IHaveCustomMappings
-        //IMapFrom<Country>, IMapFrom<ResourceGroup>
+    public class UsersAllViewModel : IMapFrom<User>, IMapFrom<IdentityUserRole<string>>, IHaveCustomMappings,
+        IMapFrom<Country> //, IMapFrom<ResourceGroup>
     {
+        public string Id { get; set; }
+
         public string UserName { get; set; }
 
         public string FullName { get; set; }
 
-        public IdentityUserRole<string> Roles { get; set; }
+        public List<IdentityUserRole<string>> Roles { get; set; }
 
         public string Email { get; set; }
 
-        //public string Country { get; set; }
+        public string Country { get; set; }
 
-        //public string ResourceGroup { get; set; }
+        public string ResourceGroup { get; set; }
 
         //var countryFromDb = dbContext.Countries.SingleOrDefault(s => s.Name == createUserModel.Country);
 
@@ -32,12 +30,13 @@
             configuration.CreateMap<User, UsersAllViewModel>()
                 .ForMember(
                     u => u.FullName,
-                    opt => opt.MapFrom(u => $"{u.FirstName} {u.LastName}"));
-
-            //configuration.CreateMap<Country, UsersAllViewModel>()
-            //    .ForMember(
-            //        c => c.Country,
-            //        opt => opt.MapFrom(c => $"{c.Name}"));
+                    opt => opt.MapFrom(u => $"{u.FirstName} {u.LastName}"))
+                .ForMember(
+                    c => c.Country,
+                    opt => opt.MapFrom(c => $"{c.Country.Name}"))
+                .ForMember(
+                    rg => rg.ResourceGroup,
+                    opt => opt.MapFrom(rg => $"{rg.ResourceGroup.Name}"));
 
             //configuration.CreateMap<ResourceGroup, UsersAllViewModel>()
             //    .ForMember(

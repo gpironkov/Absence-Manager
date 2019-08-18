@@ -13259,6 +13259,7 @@
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v2.2": [
       "BuildBundlerMinifier >= 2.9.406",
+      "Jandaya.Common >= 1.0.0",
       "Jandaya.Data >= 1.0.0",
       "Jandaya.Services >= 1.0.0",
       "Jandaya.Services.Mapping >= 1.0.0",
@@ -13299,6 +13300,9 @@
       "frameworks": {
         "netcoreapp2.2": {
           "projectReferences": {
+            "C:\\Users\\gpironkov\\Desktop\\Georgi\\proj2\\Absence-Manager\\Jandaya\\Jandaya.Common\\Jandaya.Common.csproj": {
+              "projectPath": "C:\\Users\\gpironkov\\Desktop\\Georgi\\proj2\\Absence-Manager\\Jandaya\\Jandaya.Common\\Jandaya.Common.csproj"
+            },
             "C:\\Users\\gpironkov\\Desktop\\Georgi\\proj2\\Absence-Manager\\Jandaya\\Jandaya.Data\\Jandaya.Data.csproj": {
               "projectPath": "C:\\Users\\gpironkov\\Desktop\\Georgi\\proj2\\Absence-Manager\\Jandaya\\Jandaya.Data\\Jandaya.Data.csproj"
             },

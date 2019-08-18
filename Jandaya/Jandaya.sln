@@ -15,7 +15,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Jandaya.Services.Mapping", 
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{062D4924-F320-4E7A-AC5C-3C287EA75595}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Jandaya.Tests", "Tests\Jandaya.Tests\Jandaya.Tests.csproj", "{0EB436AC-983D-4B63-9F4A-906EDED0C899}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Jandaya.Tests", "Tests\Jandaya.Tests\Jandaya.Tests.csproj", "{0EB436AC-983D-4B63-9F4A-906EDED0C899}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
