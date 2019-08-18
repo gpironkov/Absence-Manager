@@ -1,10 +1,7 @@
 ﻿namespace Jandaya.Controllers.Administration
 {
-    using System;
-    using System.Collections.Generic;
     using System.Linq;
     using System.Threading.Tasks;
-    using Jandaya.Data.Models;
     using Jandaya.Data.Models.BindingModels;
     using Jandaya.Services;
     using Microsoft.AspNetCore.Mvc;

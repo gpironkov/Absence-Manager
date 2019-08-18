@@ -17,6 +17,7 @@
     using Jandaya.Services.Mapping;
     using Jandaya.Models;
     using Jandaya.Services;
+    using Jandaya.Services.Interfaces;
 
     public class Startup
     {
@@ -85,6 +86,7 @@
             services.AddTransient<IAdminService, AdminServices>();
             services.AddTransient<ICalendarService, CalendarService>();
             services.AddTransient<IResourceGroupService, ResourceGroupService>();
+            services.AddTransient<IBookingTypeService, BookingTypeService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

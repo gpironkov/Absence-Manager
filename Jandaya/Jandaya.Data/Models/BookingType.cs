@@ -16,6 +16,10 @@
         [MaxLength(50)]
         public string Name { get; set; }
 
+        public bool IsPaidTimeOff { get; set; }
+
+        public bool IsSubtractDaysLeft { get; set; }
+
         public List<Booking> Bookings { get; set; } = new List<Booking>();
     }
 }
