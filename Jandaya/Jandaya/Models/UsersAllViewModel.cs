@@ -6,8 +6,7 @@
     using Microsoft.AspNetCore.Identity;
     using System.Collections.Generic;
 
-    public class UsersAllViewModel : IMapFrom<User>, IMapFrom<IdentityUserRole<string>>, IHaveCustomMappings,
-        IMapFrom<Country> //, IMapFrom<ResourceGroup>
+    public class UsersAllViewModel : IMapFrom<User>, IMapFrom<IdentityUserRole<string>>, IHaveCustomMappings
     {
         public string Id { get; set; }
 
@@ -23,8 +22,6 @@
 
         public string ResourceGroup { get; set; }
 
-        //var countryFromDb = dbContext.Countries.SingleOrDefault(s => s.Name == createUserModel.Country);
-
         public void CreateMappings(IProfileExpression configuration)
         {
             configuration.CreateMap<User, UsersAllViewModel>()
@@ -37,11 +34,6 @@
                 .ForMember(
                     rg => rg.ResourceGroup,
                     opt => opt.MapFrom(rg => $"{rg.ResourceGroup.Name}"));
-
-            //configuration.CreateMap<ResourceGroup, UsersAllViewModel>()
-            //    .ForMember(
-            //        rg => rg.ResourceGroup,
-            //        opt => opt.MapFrom(rg => $"{rg.Name}"));
         }
     }
 }

@@ -7,7 +7,5 @@
     public interface IResourceGroupService
     {
         Task<bool> AddNewResourceGroup(AddNewResourceGroupBindingModel bindingModel);
-
-        IEnumerable<string> GetResourceGroups();
     }
 }

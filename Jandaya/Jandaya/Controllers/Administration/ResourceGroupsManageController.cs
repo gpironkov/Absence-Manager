@@ -27,7 +27,7 @@
 
             await this.ResGroupService.AddNewResourceGroup(bindingModel);
 
-            return Redirect("/");
+            return RedirectToAction(nameof(this.ResourceGroups));
         }
     }
 }

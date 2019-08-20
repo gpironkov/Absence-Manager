@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using Jandaya.Data;
 using Jandaya.Data.Models;
 using Jandaya.Data.Models.BindingModels;
+using Jandaya.Services.Interfaces;
 
 namespace Jandaya.Services
 {
@@ -21,16 +22,20 @@ namespace Jandaya.Services
         public async Task<bool> AddNewResourceGroup(AddNewResourceGroupBindingModel bindingModel)
         {
             var resGroup = new ResourceGroup();
-
             resGroup.Name = bindingModel.Name;
 
-            this.dbContext.ResourceGroups.Add(resGroup);
+            if (this.GetResourceGroups().Contains(resGroup.Name))
+            {
+                return false;
+            }
+
+            this.dbContext.ResourceGroups.Add(resGroup);            
             var result = await this.dbContext.SaveChangesAsync();
 
             return result > 0;
         }
 
-        public IEnumerable<string> GetResourceGroups()
+        private IEnumerable<string> GetResourceGroups()
         {
             var resourceGroups = this.dbContext.ResourceGroups.Select(x => x.Name).ToList();
 

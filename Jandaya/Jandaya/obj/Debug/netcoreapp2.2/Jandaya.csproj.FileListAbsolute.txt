@@ -121,3 +121,5 @@ C:\Users\gpironkov\Desktop\Georgi\proj2\Absence-Manager\Jandaya\Jandaya\obj\Debu
 C:\Users\gpironkov\Desktop\Georgi\proj2\Absence-Manager\Jandaya\Jandaya\obj\Debug\netcoreapp2.2\Razor\Views\BookingTypesManage\BookingTypes.g.cshtml.cs
 C:\Users\gpironkov\Desktop\Georgi\proj2\Absence-Manager\Jandaya\Jandaya\obj\Debug\netcoreapp2.2\Razor\Views\CalendarManage\CreateHoliday.g.cshtml.cs
 C:\Users\gpironkov\Desktop\Georgi\proj2\Absence-Manager\Jandaya\Jandaya\obj\Debug\netcoreapp2.2\Razor\Views\Shared\Components\ResourceGroups\Default.g.cshtml.cs
+C:\Users\gpironkov\Desktop\Georgi\proj2\Absence-Manager\Jandaya\Jandaya\obj\Debug\netcoreapp2.2\Razor\Views\UserManage\SetResourceGroup.g.cshtml.cs
+C:\Users\gpironkov\Desktop\Georgi\proj2\Absence-Manager\Jandaya\Jandaya\obj\Debug\netcoreapp2.2\Razor\Views\Shared\_SaveCancelButtonsPartial.g.cshtml.cs

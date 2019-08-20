@@ -1,7 +1,11 @@
 ﻿namespace Jandaya.Services
 {
     using Jandaya.Data;
+    using Jandaya.Data.Models;
+    using Jandaya.Data.Models.BindingModels;
+    using Jandaya.Services.Interfaces;
     using Jandaya.Services.Mapping;
+    using Microsoft.AspNetCore.Identity;
     using Microsoft.EntityFrameworkCore;
     using System.Collections.Generic;
     using System.Linq;
@@ -10,10 +14,12 @@
     public class AdminServices : IAdminService
     {
         private readonly JandayaDbContext dbContext;
+        private readonly IUserServices userService;
 
-        public AdminServices(JandayaDbContext dbContext)
+        public AdminServices(JandayaDbContext dbContext, IUserServices userService)
         {
             this.dbContext = dbContext;
+            this.userService = userService;
         }
 
         public async Task<IEnumerable<TViewModel>> GetAllActiveUsers<TViewModel>()
@@ -46,6 +52,34 @@
                 .Name;
 
             return Task.FromResult(userRoleName);
+        }
+
+        private IEnumerable<string> GetResourceGroups()
+        {
+            var resourceGroups = this.dbContext.ResourceGroups.Select(x => x.Name).ToList();
+
+            return resourceGroups;
+        }
+
+        public async Task<SetResourceGroupBindingModel> GetUserAndResourceGroups(string id)
+        {
+            var user = await this.userService.GetUserById(id);
+            var model = new SetResourceGroupBindingModel();
+
+            model.FullName = $"{user.FirstName} {user.LastName}";
+            model.Name = GetResourceGroups().ToList();
+
+            return model;
+        }
+
+        public async Task SetResourceGroup(string userId, SetResourceGroupBindingModel model)
+        {
+            var userToUpdate = await this.userService.GetUserById(userId);
+            var resGroupFromDb = dbContext.ResourceGroups.SingleOrDefault(s => s.Name == model.Name.FirstOrDefault());
+
+            userToUpdate.ResourceGroupId = resGroupFromDb.Id;
+
+            await this.dbContext.SaveChangesAsync();
         }
 
         //public Task<string> GetContryNameById(int countryId)

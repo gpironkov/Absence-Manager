@@ -24,10 +24,10 @@
                     <th scope="col">Country</th>
                     <th scope="col">Role</th>
                     <th scope="col">Resource Group</th>
-                        @*if (this.User.IsInRole("Admin"))
-                        {
-                            <th scope="col">Action</th>
-                        }*@
+                    @if (this.User.IsInRole(GlobalConstants.AdministratorRoleName))
+                    {
+                        <th scope="col">Set Res. Group</th>
+                    }
                 </tr>
             </thead>
             <tbody id="userTable">
@@ -54,7 +54,10 @@
                         </td>
                         <td>@Model[i].ResourceGroup</td>
                         @*<td>ManageUserRoles</td>*@
-                        @*<td><a asp-area="Administration" asp-action="ManageUserRoles" asp-route-id="@Model[i].Id" class="btn bg-transparent"><i class="fas fa-theater-masks" data-placement="top" title="Manage user roles"></i></a></td>*@
+                        @*<td><a href="#" class="button">Example</a></td>*@
+                        <td>
+                            <a asp-controller="UserManage" asp-action="SetResourceGroup" asp-route-id="@Model[i].Id">Set</a>
+                        </td>
                     </tr>
                 }
             </tbody>

@@ -24,8 +24,8 @@
 
         public IUserServices UserService { get; }
 
-        public UserController(JandayaDbContext dbContext, 
-            UserManager<User> userManager, 
+        public UserController(JandayaDbContext dbContext,
+            UserManager<User> userManager,
             SignInManager<User> signInManager,
             IUserServices userService)
         {
@@ -93,15 +93,15 @@
         {
             if (!ModelState.IsValid)
             {
-                return this.View(loginUserModel);
+                return Redirect("/User/Login");
             }
 
             var result = this.UserService.LogUser(loginUserModel);
 
             if (result != SignInResult.Success)
             {
-                this.ViewData[GlobalConstants.ModelError] = GlobalConstants.LoginError;
-                return this.View(loginUserModel);
+                this.ModelState.AddModelError(string.Empty, GlobalConstants.LoginError);
+                return Redirect("/User/Login");
             }
 
             return RedirectToAction("Index", "Home");

@@ -3,22 +3,31 @@
     using Microsoft.AspNetCore.Mvc;
     using Jandaya.Services;
     using System.Collections.Generic;
+    using Jandaya.Data;
+    using System.Linq;
 
     public class ResourceGroupsViewComponent : ViewComponent
     {
-        private readonly IResourceGroupService resourceGroupsService;
+        private readonly JandayaDbContext dbContext;
 
-        public ResourceGroupsViewComponent(IResourceGroupService resourceGroupsService)
+        public ResourceGroupsViewComponent(JandayaDbContext dbContext)
         {
-            this.resourceGroupsService = resourceGroupsService;
+            this.dbContext = dbContext;
         }
 
         public IViewComponentResult Invoke()
         {
             return this.View(new ResourceGroupViewComponentViewModel
             {
-                Name = resourceGroupsService.GetResourceGroups()
+                Name = this.GetResourceGroups()
             });
+        }
+
+        private IEnumerable<string> GetResourceGroups()
+        {
+            var resourceGroups = this.dbContext.ResourceGroups.Select(x => x.Name).ToList();
+
+            return resourceGroups;
         }
     }
 

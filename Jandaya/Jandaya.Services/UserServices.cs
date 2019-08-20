@@ -5,10 +5,12 @@
     using Jandaya.Data.Models.BindingModels;
     using Microsoft.AspNetCore.Identity;
     using System.Linq;
+    using System.Threading.Tasks;
 
     public class UserServices : IUserServices
     {
         private readonly JandayaDbContext dbContext;
+
         protected SignInManager<User> SignInManager { get; } //SignInManager<JandayaUserModel>
 
         public UserServices(JandayaDbContext dbContext, SignInManager<User> SignInManager)
@@ -30,6 +32,13 @@
             var result = this.SignInManager.PasswordSignInAsync(user, password, true, false).Result;
 
             return result;
-        }        
+        }
+
+        public Task<User> GetUserById(string id)
+        {
+            var user = this.dbContext.Users.SingleOrDefault(u => u.Id == id);
+
+            return Task.FromResult(user);
+        }
     }
 }

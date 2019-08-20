@@ -12,7 +12,7 @@
 
         [Required]
         [Display(Name = "Choose date*")]
-        //[DataType(DataType.Text)]
+        [DataType(DataType.Text)]
         public DateTime ChosenDate { get; set; }
 
         [Display(Name = "Holiday name")]
