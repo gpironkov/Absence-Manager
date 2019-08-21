@@ -6,7 +6,7 @@
     using Jandaya.Services;
     using Microsoft.AspNetCore.Mvc;
 
-    public class ResourceGroupsManageController : Controller
+    public class ResourceGroupsManageController : AdminController
     {
         public IResourceGroupService ResGroupService { get; }
 

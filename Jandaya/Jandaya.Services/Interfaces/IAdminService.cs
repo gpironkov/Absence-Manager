@@ -12,6 +12,10 @@
 
         Task SetResourceGroup(string id, SetResourceGroupBindingModel model);
 
+        Task SetUserRole(string id, SetUserRoleBindingModel model);
+
         Task<SetResourceGroupBindingModel> GetUserAndResourceGroups(string id);
+
+        Task<SetUserRoleBindingModel> GetUserAndRoles(string id);
     }
 }

@@ -9,7 +9,7 @@
     using Jandaya.Services;
     using Microsoft.AspNetCore.Mvc;
 
-    public class CalendarManageController : Controller
+    public class CalendarManageController : AdminController
     {
         public ICalendarService CalendarService { get; }
 

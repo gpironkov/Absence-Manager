@@ -6,7 +6,7 @@
     using Jandaya.Services.Interfaces;
     using Microsoft.AspNetCore.Mvc;
 
-    public class BookingTypesManageController : Controller
+    public class BookingTypesManageController : AdminController
     {
         public IBookingTypeService BookingTypeService { get; }
 

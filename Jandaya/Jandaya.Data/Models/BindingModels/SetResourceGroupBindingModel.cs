@@ -8,7 +8,8 @@
         [Display(Name="User name")]
         public string FullName { get; set; }
 
-        [Display(Name = "Resource group name")]
+        [Required]
+        [Display(Name = "Resource group name*")]
         public List<string> Name { get; set; }
     }
 }

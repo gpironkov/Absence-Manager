@@ -40,5 +40,25 @@
 
             return RedirectToAction(nameof(this.GetUserData));
         }
+
+        public async Task<IActionResult> SetUserRole(string id)
+        {
+            var userRolesForUpdate = await this.adminService.GetUserAndRoles(id);
+
+            return this.View(userRolesForUpdate);
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> SetUserRole(SetUserRoleBindingModel model, string id)
+        {
+            if (!this.ModelState.IsValid)
+            {
+                return BadRequest(ModelState.Values.SelectMany(v => v.Errors).Select(error => error.ErrorMessage));
+            }
+
+            await this.adminService.SetUserRole(id, model);
+
+            return RedirectToAction(nameof(this.GetUserData));
+        }
     }
 }
