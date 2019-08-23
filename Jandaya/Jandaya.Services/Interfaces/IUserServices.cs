@@ -10,5 +10,11 @@
         SignInResult LogUser(LoginUserBindingModel loginModel);
 
         Task<User> GetUserById(string id);
+
+        Task<int> GetDaysLeftById(string userId);
+
+        Task<string> GetCurrentUserId();
+
+        Task<string> GetRoleIdByName(string roleName);
     }
 }

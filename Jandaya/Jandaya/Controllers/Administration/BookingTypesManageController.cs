@@ -8,9 +8,9 @@
 
     public class BookingTypesManageController : AdminController
     {
-        public IBookingTypeService BookingTypeService { get; }
+        public IBookingService BookingTypeService { get; }
 
-        public BookingTypesManageController(IBookingTypeService bookingTypeService)
+        public BookingTypesManageController(IBookingService bookingTypeService)
         {
             this.BookingTypeService = bookingTypeService;
         }

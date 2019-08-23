@@ -87,7 +87,7 @@
             services.AddTransient<IAdminService, AdminServices>();
             services.AddTransient<ICalendarService, CalendarService>();
             services.AddTransient<IResourceGroupService, ResourceGroupService>();
-            services.AddTransient<IBookingTypeService, BookingTypeService>();
+            services.AddTransient<IBookingService, BookingService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

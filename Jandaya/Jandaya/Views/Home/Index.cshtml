@@ -1,6 +1,7 @@
 ﻿@using Microsoft.AspNetCore.Identity
 @using Jandaya.Data.Models
 @using Jandaya.Common
+@using System.Web;
 @inject SignInManager<User> SignInManager
 
 @{
@@ -8,30 +9,24 @@
     //Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<div class="text-center">
-    @if (!this.SignInManager.IsSignedIn(this.User))
-    {
-        <h1 class="display-2">Welcome to Jandaya!</h1>
-        <br />
-        <h1 class="display-4">(the easiest way to book your absence)</h1>
-
-        <hr />
-        <a asp-action="Login" asp-controller="User" class="btn btn-lg btn-primary">Sign in</a>
-    }
-    @if (this.SignInManager.IsSignedIn(this.User) && this.User.IsInRole(GlobalConstants.AdministratorRoleName))
-    {
-        <div>
+    <div class="text-center">
+        @if (!this.SignInManager.IsSignedIn(this.User))
+        {
+            <h1 class="display-2">Welcome to Jandaya!</h1>
             <br />
-            <a class="btn btn-outline-primary btn-lg" asp-controller="UserManage" asp-action="GetUserData">Manage Users</a>
-            <a class="btn btn-outline-primary btn-lg" asp-controller="CalendarManage" asp-action="CreateHoliday">Manage Calendar by Country</a>
-            <a class="btn btn-outline-primary btn-lg" asp-controller="ResourceGroupsManage" asp-action="ResourceGroups">Manage Resource Groups</a>
-            <a class="btn btn-outline-primary btn-lg" asp-controller="BookingTypesManage" asp-action="BookingTypes">Manage Booking Types</a>
-        </div>
-    }
-    @if (this.SignInManager.IsSignedIn(this.User) && this.User.IsInRole(GlobalConstants.EmployeeRoleName))
-    {
-        <div>
-            <input type="button" name="Proben" value="Click me User!" />
-        </div>
-    }
-</div>
+            <h1 class="display-4">The easiest way to book your absence.</h1>
+
+            <hr />
+            <a asp-action="Login" asp-controller="User" class="btn btn-lg btn-primary">Sign in</a>
+        }
+        @if (this.SignInManager.IsSignedIn(this.User) && this.User.IsInRole(GlobalConstants.AdministratorRoleName))
+        {
+            <div>
+                <br />
+                <a class="btn btn-outline-primary btn-lg" asp-controller="UserManage" asp-action="GetUserData">Manage Users</a>
+                <a class="btn btn-outline-primary btn-lg" asp-controller="CalendarManage" asp-action="CreateHoliday">Manage Calendar by Country</a>
+                <a class="btn btn-outline-primary btn-lg" asp-controller="ResourceGroupsManage" asp-action="ResourceGroups">Manage Resource Groups</a>
+                <a class="btn btn-outline-primary btn-lg" asp-controller="BookingTypesManage" asp-action="BookingTypes">Manage Booking Types</a>
+            </div>
+        }
+    </div>

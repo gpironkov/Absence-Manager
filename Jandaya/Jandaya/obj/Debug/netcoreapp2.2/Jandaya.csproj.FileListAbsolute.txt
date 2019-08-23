@@ -124,3 +124,5 @@ C:\Users\gpironkov\Desktop\Georgi\proj2\Absence-Manager\Jandaya\Jandaya\obj\Debu
 C:\Users\gpironkov\Desktop\Georgi\proj2\Absence-Manager\Jandaya\Jandaya\obj\Debug\netcoreapp2.2\Razor\Views\UserManage\SetResourceGroup.g.cshtml.cs
 C:\Users\gpironkov\Desktop\Georgi\proj2\Absence-Manager\Jandaya\Jandaya\obj\Debug\netcoreapp2.2\Razor\Views\Shared\_SaveCancelButtonsPartial.g.cshtml.cs
 C:\Users\gpironkov\Desktop\Georgi\proj2\Absence-Manager\Jandaya\Jandaya\obj\Debug\netcoreapp2.2\Razor\Views\UserManage\SetUserRole.g.cshtml.cs
+C:\Users\gpironkov\Desktop\Georgi\proj2\Absence-Manager\Jandaya\Jandaya\obj\Debug\netcoreapp2.2\Razor\Views\UserBookingAbsence\BookAbsence.g.cshtml.cs
+C:\Users\gpironkov\Desktop\Georgi\proj2\Absence-Manager\Jandaya\Jandaya\obj\Debug\netcoreapp2.2\Razor\Views\NoResourceGroup\NoResGroup.g.cshtml.cs

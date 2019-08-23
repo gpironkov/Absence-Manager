@@ -1,0 +1,113 @@
+﻿@using Jandaya.Data.Models.BindingModels
+@model BookAbsenceBindingModel
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewData["Title"] = "Book your absence";
+}
+
+<div class="jumbotron">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <h2 class="d-flex justify-content-center text-dark">@ViewData["Title"]</h2>
+            <br />
+            <form class="form-horizontal w-75" method="post" asp-action="BookAbsence" asp-controller="UserBookingAbsence">
+                <div class="form-group">
+                    <div class="d-flex justify-content-end">
+                        <label asp-for="@Model.BookingTypes" class="col-sm-2 control-label"></label>
+                        <div class="col-sm-7">
+                            @Html.DropDownListFor(x => x.BookingTypes, new SelectList(Model.BookingTypes), "--- Select Type ---")
+                        </div>
+                    </div>
+                    <div class="d-flex justify-content-end">
+                        <span asp-validation-for="@Model.BookingTypes" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="d-flex justify-content-end">
+                        <label asp-for="StartDate" class="col-sm-2 control-label"></label>
+                        <div class="form-group input-group col-sm-7">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text"> <i class="fas fa-calendar-alt"></i></span>
+                            </div>
+                            <input asp-for="StartDate" autocomplete="off" id="startDate" class="form-control" placeholder="dd/MM/yyyy" />
+                        </div>
+                    </div>
+                    <div class="d-flex justify-content-end">
+                        <span asp-validation-for="StartDate" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="d-flex justify-content-end">
+                        <label asp-for="@Model.EndDate" class="col-sm-2 control-label"></label>
+                        <div class="form-group input-group col-sm-7">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text"> <i class="fas fa-calendar-alt"></i></span>
+                            </div>
+                            <input asp-for="@Model.EndDate" autocomplete="off" id="endDate" class="form-control" placeholder="dd/MM/yyyy" />
+                        </div>
+                    </div>
+                    <div class="d-flex justify-content-end">
+                        <span asp-validation-for="@Model.EndDate" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="form-group" id="commentSection">
+                    <div class="fa fa-comment form-control-feedback right justify-content-end" aria-hidden="true"></div>
+                    <label for="comment">Comment:</label>
+                    <textarea class="form-control" rows="2" cols="2" id="comment"></textarea>
+                </div>
+                <div class="mt-2 bg-resources hr-2 justify-content-end w-50">
+                    <hr />
+                </div>
+                <div class="d-flex">
+                    <button type="submit" class="btn btn-primary btn-block w-50">Submit for approval</button>
+                </div>
+            </form>
+        </div>
+        <div class="col-md-3">
+            <br style=“line-height:100px;”>
+            <table>
+                <tr style="vertical-align: text-bottom;">
+                    <td>
+                        <label asp-for="@Model.Duration"></label>
+                    </td>
+                    <td>
+                        @Model.Duration
+                    </td>
+                </tr>
+                <tr></tr>
+                <tr style="vertical-align: text-bottom;">
+                    <td>
+                        <label asp-for="@Model.DaysLeft"></label>
+                    </td>
+                    <td>
+                        @Model.DaysLeft
+                    </td>
+                </tr>
+                <tr style="vertical-align: text-bottom;">
+                    <td>
+                        <label asp-for="@Model.Approver"></label>
+                    </td>
+                    <td>
+                        @Model.Approver
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+    <script type="text/javascript" src="~/js/jquery.datetimepicker.full.min.js"></script>
+    <script>
+        window.onload = () => {
+            $('#startDate, #endDate').datetimepicker({
+                timepicker: false,
+                format: 'd/m/Y',
+                minDate: '-1970/01/01',
+                lang: 'en',
+                todayButton: true,
+                dayOfWeekStart: '1',
+            });
+        };</script>
+}

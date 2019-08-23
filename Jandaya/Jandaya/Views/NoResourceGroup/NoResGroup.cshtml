@@ -1,0 +1,12 @@
+﻿@using Microsoft.AspNetCore.Identity
+@using Jandaya.Data.Models
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewData["Title"] = "No Resource Group";
+}
+
+<div class="text-center">
+    <h3 class="display-4">@User.Identity.Name, you have no resource group (department) set in the system yet.</h3>
+    <br />
+    <h3 class="display-5">The administrator will take care of it!</h3>
+</div>

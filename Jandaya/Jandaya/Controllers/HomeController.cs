@@ -5,6 +5,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Jandaya.Models;
+using Jandaya.Common;
 
 namespace Jandaya.Controllers
 {
@@ -12,6 +13,11 @@ namespace Jandaya.Controllers
     {
         public IActionResult Index()
         {
+            if (this.User.Identity.IsAuthenticated && this.User.IsInRole(GlobalConstants.EmployeeRoleName))
+            {
+                return RedirectToAction("BookAbsence", "UserBookingAbsence");
+            }
+
             return View();
         }
 

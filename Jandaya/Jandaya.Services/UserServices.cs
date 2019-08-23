@@ -3,20 +3,25 @@
     using Jandaya.Data;
     using Jandaya.Data.Models;
     using Jandaya.Data.Models.BindingModels;
+    using Microsoft.AspNetCore.Http;
     using Microsoft.AspNetCore.Identity;
     using System.Linq;
+    using System.Security.Claims;
     using System.Threading.Tasks;
 
     public class UserServices : IUserServices
     {
         private readonly JandayaDbContext dbContext;
+        private readonly IHttpContextAccessor httpContextAccessor;
 
-        protected SignInManager<User> SignInManager { get; } //SignInManager<JandayaUserModel>
+        protected SignInManager<User> SignInManager { get; }
 
-        public UserServices(JandayaDbContext dbContext, SignInManager<User> SignInManager)
+        public UserServices(JandayaDbContext dbContext, SignInManager<User> SignInManager,
+            IHttpContextAccessor httpContextAccessor)
         {
             this.dbContext = dbContext;
             this.SignInManager = SignInManager;
+            this.httpContextAccessor = httpContextAccessor;
         }        
 
         public SignInResult LogUser(LoginUserBindingModel loginModel)
@@ -34,11 +39,40 @@
             return result;
         }
 
-        public Task<User> GetUserById(string id)
+        public Task<User> GetUserById(string id)//////
         {
             var user = this.dbContext.Users.SingleOrDefault(u => u.Id == id);
 
             return Task.FromResult(user);
+        }
+
+        public Task<string> GetRoleIdByName(string roleName)
+        {
+            var resourceRoleId = this.dbContext.Roles
+                .FirstOrDefault(x => x.Name == roleName)
+                .Id;
+
+            return Task.FromResult(resourceRoleId);
+        }
+
+        public Task<string> GetCurrentUserId()
+        {
+            var currentUser = this.httpContextAccessor
+                .HttpContext
+                .User
+                .FindFirst(ClaimTypes.NameIdentifier)
+                .Value;
+
+            return Task.FromResult(currentUser);
+        }
+
+        public Task<int> GetDaysLeftById(string userId)
+        {
+            var daysLeft = this.dbContext.Users.
+                SingleOrDefault(u => u.Id == userId)
+                .DaysLeft;
+
+            return Task.FromResult(daysLeft);
         }
     }
 }
