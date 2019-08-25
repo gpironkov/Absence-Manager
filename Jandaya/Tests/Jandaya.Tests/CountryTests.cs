@@ -34,25 +34,25 @@
             return dbContext;
         }
 
-        [Fact]
-        public async Task GetCountriesShouldVerifyThatContainsSomeCountries()
-        {
-            var dbContext = await this.GetDbContext();
-            var service = new CountryService(dbContext);
-            var result = service.GetCountries();
+        //[Fact]
+        //public async Task GetCountriesShouldVerifyThatContainsSomeCountries()
+        //{
+        //    var dbContext = await this.GetDbContext();
+        //    var service = new CountryService(dbContext);
+        //    var result = service.GetCountries();
 
 
-            //Assert.Collection<result>
-            //Assert.All(result, item => Assert.Contains("Albania", item));
-            //Assert.All(result, item => Assert.Contains("Bulgaria", item));
-            //Assert.All(result, item => Assert.Contains("Germany", item));
+        //    //Assert.Collection<result>
+        //    //Assert.All(result, item => Assert.Contains("Albania", item));
+        //    //Assert.All(result, item => Assert.Contains("Bulgaria", item));
+        //    //Assert.All(result, item => Assert.Contains("Germany", item));
 
-            foreach (var item in result)
-            {
-                Assert.Equal("Albania", item);
-                Assert.Equal("Bulgaria", item);
-                Assert.Equal("Germany", item);
-            }
-        }
+        //    foreach (var item in result)
+        //    {
+        //        Assert.Equal("Albania", item);
+        //        Assert.Equal("Bulgaria", item);
+        //        Assert.Equal("Germany", item);
+        //    }
+        //}
     }
 }

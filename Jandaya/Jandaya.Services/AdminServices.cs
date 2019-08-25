@@ -1,11 +1,8 @@
 ﻿namespace Jandaya.Services
 {
     using Jandaya.Data;
-    using Jandaya.Data.Models;
     using Jandaya.Data.Models.BindingModels;
-    using Jandaya.Services.Interfaces;
     using Jandaya.Services.Mapping;
-    using Microsoft.AspNetCore.Identity;
     using Microsoft.EntityFrameworkCore;
     using System.Collections.Generic;
     using System.Linq;

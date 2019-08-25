@@ -5,14 +5,17 @@
     using Microsoft.EntityFrameworkCore.Internal;
     using System.Collections.Generic;
     using System.Linq;
+    using System.Threading.Tasks;
 
     public class CountryService : ICountryService
     {
         private readonly JandayaDbContext dbContext;
+        private readonly IUserServices userService;
 
-        public CountryService(JandayaDbContext dbContext)
+        public CountryService(JandayaDbContext dbContext, IUserServices userService)
         {
             this.dbContext = dbContext;
+            this.userService = userService;
         }
 
         public IEnumerable<string> GetCountries()
@@ -22,25 +25,14 @@
             return countries;
         }
 
-        //     public string GetCountryById(int id)
-        //     {
-        //         var countryId = this.dbContext.Users.Select(x => x.CountryId);
-        //         var country = this.dbContext.Countries.Select(x => x.Name).Join(this.dbContext.Users u => u.)
+        public async Task<int> GetCountryIdOfCurrUser()
+        {
+            var currUserId = await this.userService.GetCurrentUserId();
+            var user = await this.userService.GetUserById(currUserId);
 
-        //     select name 
-        //         from Country c
-        //         join Users u on u.CountryId = c.Id
-        //     }
+            var countryId = user.CountryId;
 
-
-        //public IEnumerable<TViewModel> GetCountries<TViewModel>()
-        //{
-        //    var countries = this.dbContext.Countries
-        //        .OrderByDescending(x => x.Name)
-        //        .To<TViewModel>()
-        //        .ToList();
-
-        //    return countries;
-        //}
+            return countryId;
+        }
     }
 }

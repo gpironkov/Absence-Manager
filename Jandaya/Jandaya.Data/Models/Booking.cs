@@ -11,6 +11,8 @@
         public Booking()
         {
             this.Id = Guid.NewGuid().ToString();
+            this.CreatedOn = DateTime.UtcNow;
+            this.Status = BookingStatus.WaitingForApproval;
         }
 
         public string UserId { get; set; }
@@ -31,6 +33,7 @@
 
         [MaxLength(300)]
         public string Comment { get; set; }
-        //public BookingStatus Status { get; set; }
+
+        public BookingStatus Status { get; set; }
     }
 }

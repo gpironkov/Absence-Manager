@@ -1,0 +1,56 @@
+﻿@using Jandaya.Common
+@model List<Jandaya.Models.BookingsAllViewModel>
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="text-center">
+    <h1 id="title" class="text-center">My Bookings</h1>
+    <div class="table-responsive">
+        <table class="table table-striped table-bordered sortable" cellspacing="0" width="100%" id="table-id">
+            <thead>
+                <tr>
+                    <th scope="col">Username</th>
+                    <th scope="col">Booking Type</th>
+                    <th scope="col">Start Date</th>
+                    <th scope="col">End Date</th>
+                    <th scope="col">Duration</th>
+                    <th scope="col">Status</th>
+                </tr>
+            </thead>
+            <tbody id="userTable">
+                @for (int i = 0; i < Model.Count; i++)
+                {
+                    <tr>
+                        <td>@Model[i].UserName</td>
+                        <td>@Model[i].BookingType</td>
+                        <td>@Model[i].StartDate</td>
+                        <td>@Model[i].EndDate</td>
+                        <td>@Model[i].Duration</td>
+                        <td>@Model[i].Status</td>
+                        @*<td>
+                                @if (Model[i].Status.Any(x => x.RoleId == GlobalConstants.AdministratorRoleName))
+                                {
+                                    <label>@GlobalConstants.AdministratorRoleName</label>
+                                }
+                                @if (Model[i].Roles.Any(x => x.RoleId == GlobalConstants.ManagerRoleName))
+                                {
+                                    <label>@GlobalConstants.ManagerRoleName</label>
+                                }
+                                @if (Model[i].Roles.Any(x => x.RoleId == GlobalConstants.EmployeeRoleName))
+                                {
+                                    <label>@GlobalConstants.EmployeeRoleName</label>
+                                }
+                            </td>*@
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
+
+@section scripts{
+    <script type="text/javascript" src="~/js/paging.js"></script>
+    <script type="text/javascript" src="~/js/search.js"></script>
+    <script type="text/javascript" src="~/js/bootstrap-sortable.js"></script>
+}

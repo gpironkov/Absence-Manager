@@ -10,7 +10,7 @@
         <div class="col-md-8">
             <h2 class="d-flex justify-content-center text-dark">@ViewData["Title"]</h2>
             <br />
-            <form class="form-horizontal w-75" method="post" asp-action="BookAbsence" asp-controller="UserBookingAbsence">
+            <form class="form-horizontal w-75" method="post" asp-action="CreateBooking" asp-controller="UserBookingAbsence">
                 <div class="form-group">
                     <div class="d-flex justify-content-end">
                         <label asp-for="@Model.BookingTypes" class="col-sm-2 control-label"></label>
@@ -66,32 +66,45 @@
         <div class="col-md-3">
             <br style=“line-height:100px;”>
             <table>
+                @*<tr style="vertical-align: text-bottom;">
+                        <td>
+                            <label asp-for="@Model.Duration"></label>
+                        </td>
+                        <td>
+                            @Model.Duration
+                        </td>
+                    </tr>
+                    <tr></tr>*@
                 <tr style="vertical-align: text-bottom;">
                     <td>
-                        <label asp-for="@Model.Duration"></label>
-                    </td>
-                    <td>
-                        @Model.Duration
+                        <a class="btn btn-outline-primary btn-lg" asp-controller="UserBookingAbsence" asp-action="GetMyBookings">Your Bookings</a>
                     </td>
                 </tr>
-                <tr></tr>
+                <tr><br /></tr>
                 <tr style="vertical-align: text-bottom;">
-                    <td>
-                        <label asp-for="@Model.DaysLeft"></label>
-                    </td>
-                    <td>
-                        @Model.DaysLeft
-                    </td>
+                    <table>
+                        <tr>
+                            <td>
+                                <label asp-for="@Model.DaysLeft"></label>
+                            </td>
+                            <td>
+                                @Model.DaysLeft
+                            </td>
+                        </tr>
+                    </table>
                 </tr>
                 <tr style="vertical-align: text-bottom;">
-                    <td>
-                        <label asp-for="@Model.Approver"></label>
-                    </td>
-                    <td>
-                        @Model.Approver
-                    </td>
+                    <table>
+                        <tr>
+                            <td>
+                                <label asp-for="@Model.Approver"></label>
+                            </td>
+                            <td>
+                                @Model.Approver
+                            </td>
+                        </tr>
+                    </table>
                 </tr>
-            </table>
         </div>
     </div>
 </div>

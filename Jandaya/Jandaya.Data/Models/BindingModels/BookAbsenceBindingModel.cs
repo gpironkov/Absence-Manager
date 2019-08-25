@@ -11,6 +11,8 @@ namespace Jandaya.Data.Models.BindingModels
         [Display(Name = "Type*")]
         public List<string> BookingTypes { get; set; }
 
+        public string BookingTypeId { get; set; }
+
         [Required]
         [DataType(DataType.Text)]
         [Display(Name = "Start*")]

@@ -1,5 +1,7 @@
 ﻿namespace Jandaya.Services
 {
+    using System;
+    using System.Collections.Generic;
     using System.Linq;
     using System.Threading.Tasks;
     using Jandaya.Data;
@@ -34,6 +36,16 @@
             int result = await this.dbContext.SaveChangesAsync();            
 
             return result > 0;
+        }
+
+        public Task<List<DateTime>> GetHolidayDatesByCountryId(int id)
+        {
+            var holidays = this.dbContext.Calendars
+                .Where(x => x.CountryId == id)
+                .Select(x => x.ChosenDate)
+                .ToList();
+
+            return Task.FromResult(holidays);
         }
     }
 }
