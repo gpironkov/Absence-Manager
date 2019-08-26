@@ -1,4 +1,5 @@
 ﻿@using Jandaya.Data.Models.BindingModels
+@using Jandaya.Common;
 @model BookAbsenceBindingModel
 @{
     Layout = "~/Views/Shared/_Layout.cshtml";
@@ -10,7 +11,7 @@
         <div class="col-md-8">
             <h2 class="d-flex justify-content-center text-dark">@ViewData["Title"]</h2>
             <br />
-            <form class="form-horizontal w-75" method="post" asp-action="CreateBooking" asp-controller="UserBookingAbsence">
+            <form id="createBooking" class="form-horizontal w-75" method="post" asp-action="CreateBooking" asp-controller="UserBookingAbsence">
                 <div class="form-group">
                     <div class="d-flex justify-content-end">
                         <label asp-for="@Model.BookingTypes" class="col-sm-2 control-label"></label>
@@ -123,4 +124,11 @@
                 dayOfWeekStart: '1',
             });
         };</script>
+    <script>
+        getErrorMsgs('#createBooking');
+    </script>
+    <script>
+        wrapInASpan([GlobalConstants.EndDateGreaterError],
+            'alert alert-danger');
+    </script>
 }

@@ -29,4 +29,12 @@
                 <a class="btn btn-outline-primary btn-lg" asp-controller="BookingTypesManage" asp-action="BookingTypes">Manage Booking Types</a>
             </div>
         }
+        @if (this.SignInManager.IsSignedIn(this.User) && this.User.IsInRole(GlobalConstants.ManagerRoleName))
+        {
+            <div>
+                <br />
+                <a class="btn btn-outline-primary btn-lg" asp-controller="" asp-action="">View Bookings in Your Team</a>
+                <a class="btn btn-outline-primary btn-lg" asp-controller="" asp-action="">Create Booking</a>
+            </div>
+        }
     </div>

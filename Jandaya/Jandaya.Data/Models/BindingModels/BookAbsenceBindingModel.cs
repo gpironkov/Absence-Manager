@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Jandaya.Common;
+using Jandaya.Common.Validators;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Text;
@@ -19,6 +21,7 @@ namespace Jandaya.Data.Models.BindingModels
         public DateTime? StartDate { get; set; }
 
         [Required]
+        [DateGreaterThan(nameof(StartDate), ErrorMessage = GlobalConstants.EndDateGreaterError)]
         [DataType(DataType.Text)]
         [Display(Name = "End*")]
         public DateTime? EndDate { get; set; }

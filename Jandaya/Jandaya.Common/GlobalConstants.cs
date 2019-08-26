@@ -15,5 +15,7 @@
         public const string ModelError = "LoginError";
 
         public const string LoginError = "Username or password is not correct!";
+
+        public const string EndDateGreaterError = "End date must be greater than Start Date!";
     }
 }
