@@ -153,9 +153,22 @@
             //booking.Duration = Convert.ToInt32((a - b).TotalDays) + 2;
 
             var currHolidays = this.calendarService.GetHolidayDatesByCountryId(await this.countryService.GetCountryIdOfCurrUser());
-            //var countHolidays = currHolidays.Result.Count<DateTime>();
+            var countHolidays = currHolidays.Result.Count<DateTime>();
 
             var isSubtract = booking.BookingType.IsSubtractDaysLeft;
+
+            if (countHolidays == 0)
+            {
+                if (!isSubtract)
+                {
+                    booking.Duration++;
+                }
+                else
+                {
+                    booking.Duration++;
+                    user.DaysLeft--;
+                }
+            }
 
             while (start != end)
             {
@@ -165,35 +178,32 @@
                     {
                         foreach (var holiday in await currHolidays)
                         {
-                            if (holiday >= start && holiday <= end && start == holiday)
+                            if (start == holiday)
                             {
-                                booking.Duration--;
+                                continue;
                             }
                         }
 
                         booking.Duration++;
                     }
+
                     else
                     {
                         foreach (var holiday in await currHolidays)
                         {
-                            if (holiday >= start && holiday <= end && start == holiday)
+                            if (start == holiday)
                             {
-                                booking.Duration--;
+                                continue;
                             }
                         }
 
-                        user.DaysLeft--;
                         booking.Duration++;
+                        user.DaysLeft--;
                     }
                 }
 
                 start = start.AddDays(1);
             }
-
-            //bindingModel.Duration = booking.Duration;
-            user.DaysLeft--;
-            booking.Duration++;
         }
 
         public async Task<bool> Create(BookAbsenceBindingModel bindingModel)
