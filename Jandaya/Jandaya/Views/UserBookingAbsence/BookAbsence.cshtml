@@ -6,6 +6,19 @@
     ViewData["Title"] = "Book your absence";
 }
 
+<div class="text-center">
+    <div>
+        <br />
+        @if (this.User.IsInRole(GlobalConstants.ManagerRoleName))
+        {
+            <div>
+                <a class="btn btn-outline-primary btn-lg" asp-controller="Manager" asp-action="BookingsInYourTeam">View Bookings in Your Team</a>
+                <a class="btn btn-outline-primary btn-lg" asp-controller="Manager" asp-action="Index">Create Booking</a>
+            </div>
+        }
+    </div>
+</div>
+<br />
 <div class="jumbotron">
     <div class="row justify-content-center">
         <div class="col-md-8">

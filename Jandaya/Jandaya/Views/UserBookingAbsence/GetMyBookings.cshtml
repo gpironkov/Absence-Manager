@@ -24,24 +24,10 @@
                     <tr>
                         <td>@Model[i].UserName</td>
                         <td>@Model[i].BookingType</td>
-                        <td>@Model[i].StartDate</td>
-                        <td>@Model[i].EndDate</td>
+                        <td>@Model[i].StartDate.ToString("dd.MM.yyyy")</td>
+                        <td>@Model[i].EndDate.ToString("dd.MM.yyyy")</td>
                         <td>@Model[i].Duration</td>
                         <td>@Model[i].Status</td>
-                        @*<td>
-                                @if (Model[i].Status.Any(x => x.RoleId == GlobalConstants.AdministratorRoleName))
-                                {
-                                    <label>@GlobalConstants.AdministratorRoleName</label>
-                                }
-                                @if (Model[i].Roles.Any(x => x.RoleId == GlobalConstants.ManagerRoleName))
-                                {
-                                    <label>@GlobalConstants.ManagerRoleName</label>
-                                }
-                                @if (Model[i].Roles.Any(x => x.RoleId == GlobalConstants.EmployeeRoleName))
-                                {
-                                    <label>@GlobalConstants.EmployeeRoleName</label>
-                                }
-                            </td>*@
                     </tr>
                 }
             </tbody>

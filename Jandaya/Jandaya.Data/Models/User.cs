@@ -46,6 +46,7 @@
 
         public List<Booking> Bookings { get; set; } = new List<Booking>();
 
+        [Range(0, int.MaxValue, ErrorMessage = "Days left can not be a negative number")]
         public int DaysLeft { get; set; }
     }
 }

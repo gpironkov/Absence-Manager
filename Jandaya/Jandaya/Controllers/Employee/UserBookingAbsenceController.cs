@@ -11,7 +11,6 @@
     using Microsoft.AspNetCore.Authorization;
     using Microsoft.AspNetCore.Mvc;
 
-    [Authorize(Roles = GlobalConstants.EmployeeRoleName)]
     //[Route("/User/Login")]
     public class UserBookingAbsenceController : Controller
     {

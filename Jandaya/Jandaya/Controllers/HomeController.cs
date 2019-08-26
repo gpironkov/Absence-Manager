@@ -1,14 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
-using Jandaya.Models;
-using Jandaya.Common;
-
-namespace Jandaya.Controllers
+﻿namespace Jandaya.Controllers
 {
+    using System;
+    using System.Collections.Generic;
+    using System.Diagnostics;
+    using System.Linq;
+    using System.Threading.Tasks;
+    using Microsoft.AspNetCore.Mvc;
+    using Jandaya.Models;
+    using Jandaya.Common;
+
     public class HomeController : Controller
     {
         public IActionResult Index()

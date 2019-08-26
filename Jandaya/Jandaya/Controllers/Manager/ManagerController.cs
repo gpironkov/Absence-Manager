@@ -10,6 +10,11 @@
     {
         public IActionResult Index()
         {
+            return RedirectToAction("BookAbsence", "UserBookingAbsence");
+        }
+
+        public IActionResult BookingsInYourTeam()
+        {
             return View();
         }
     }
