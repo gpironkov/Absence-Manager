@@ -5,6 +5,7 @@
     using Jandaya.Data.Models.BindingModels;
     using Microsoft.AspNetCore.Http;
     using Microsoft.AspNetCore.Identity;
+    using System.Collections.Generic;
     using System.Linq;
     using System.Security.Claims;
     using System.Threading.Tasks;
@@ -68,11 +69,35 @@
 
         public Task<int> GetDaysLeftById(string userId)
         {
-            var daysLeft = this.dbContext.Users.
-                SingleOrDefault(u => u.Id == userId)
+            var daysLeft = this.dbContext.Users
+                .SingleOrDefault(u => u.Id == userId)
                 .DaysLeft;
 
             return Task.FromResult(daysLeft);
+        }
+
+        public Task<IEnumerable<string>> GetUserIdsByResGroupId(string resGroupId)
+        {
+            var currentUser = this.GetCurrentUserId();
+
+            var userIds = this.dbContext.Users
+                .Where(u => u.Id != currentUser.ToString())
+                .Where(u => u.ResourceGroupId == resGroupId)
+                .Select(u => u.Id)
+                .ToList();
+
+            return Task.FromResult(userIds.AsEnumerable());
+        }
+
+        public string GetResGroupId()
+        {
+            var currentUser = this.GetCurrentUserId();
+
+            var resGroupId = this.dbContext.Users
+                .FirstOrDefault(u => u.Id == "aee7f483-4091-42fd-b10a-3c6f115094f0") //currentUser.ToString())
+                .ResourceGroupId;
+
+            return resGroupId;
         }
     }
 }

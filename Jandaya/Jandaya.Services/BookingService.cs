@@ -60,14 +60,35 @@
             return model;
         }
 
-        public async Task<IEnumerable<TViewModel>> GetAllBookings<TViewModel>()
+        public async Task<IEnumerable<TViewModel>> GetMyTeamBookings<TViewModel>()
         {
-            var currentUser = await this.userService.GetCurrentUserId();
+            var currentUserId = await this.userService.GetCurrentUserId();
+            var currentTeamUserIds = await this.userService.GetUserIdsByResGroupId(this.userService.GetResGroupId().ToString());
+
+            var bookings = new List<TViewModel>();
+
+            foreach (var item in currentTeamUserIds)
+            {
+                bookings = this.dbContext.Bookings
+                .Include(u => u.User)
+                .Include(u => u.BookingType)
+                .Where(u => u.UserId == item)
+                .OrderByDescending(u => u.CreatedOn)
+                .To<TViewModel>()
+                .ToList();
+            }
+
+            return bookings;
+        }
+
+        public async Task<IEnumerable<TViewModel>> GetMyBookings<TViewModel>()
+        {
+            var currentUserId = await this.userService.GetCurrentUserId();
 
             var bookings = this.dbContext.Bookings
                 .Include(u => u.User)
                 .Include(u => u.BookingType)
-                .Where(u => u.UserId == currentUser)
+                .Where(u => u.UserId == currentUserId)
                 .OrderByDescending(u => u.CreatedOn)
                 .To<TViewModel>()
                 .ToList();

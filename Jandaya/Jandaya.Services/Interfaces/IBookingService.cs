@@ -6,7 +6,9 @@
 
     public interface IBookingService
     {
-        Task<IEnumerable<TViewModel>> GetAllBookings<TViewModel>();
+        Task<IEnumerable<TViewModel>> GetMyBookings<TViewModel>();
+
+        Task<IEnumerable<TViewModel>> GetMyTeamBookings<TViewModel>();
 
         Task<bool> Create(BookAbsenceBindingModel bindingModel);
 

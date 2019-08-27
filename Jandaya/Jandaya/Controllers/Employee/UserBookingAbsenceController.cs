@@ -55,7 +55,7 @@
                 return BadRequest(ModelState.Values.SelectMany(v => v.Errors).Select(error => error.ErrorMessage));
             }
 
-            var bookings = await service.GetAllBookings<BookingsAllViewModel>();
+            var bookings = await service.GetMyBookings<BookingsAllViewModel>();
             return this.View(bookings);
         }
     }

@@ -1,21 +1,34 @@
 ﻿namespace Jandaya.Controllers.Manager
 {
-    using System;
-    using System.Collections.Generic;
+    using Jandaya.Services.Interfaces;
+    using Jandaya.Models;
+    using Microsoft.AspNetCore.Mvc;
     using System.Linq;
     using System.Threading.Tasks;
-    using Microsoft.AspNetCore.Mvc;
 
     public class ManagerController : Controller
     {
+        private readonly IBookingService service;
+
+        public ManagerController(IBookingService service)
+        {
+            this.service = service;
+        }
+
         public IActionResult Index()
         {
             return RedirectToAction("BookAbsence", "UserBookingAbsence");
         }
 
-        public IActionResult BookingsInYourTeam()
+        public async Task<IActionResult> BookingsInYourTeam()
         {
-            return View();
+            if (!this.ModelState.IsValid)
+            {
+                return BadRequest(ModelState.Values.SelectMany(v => v.Errors).Select(error => error.ErrorMessage));
+            }
+
+            var bookings = await service.GetMyTeamBookings<BookingsAllViewModel>();
+            return this.View(bookings);
         }
     }
 }

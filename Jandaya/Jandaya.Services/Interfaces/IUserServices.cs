@@ -4,6 +4,7 @@
     using Jandaya.Data.Models.BindingModels;
     using Jandaya.Data.Models;
     using System.Threading.Tasks;
+    using System.Collections.Generic;
 
     public interface IUserServices
     {
@@ -14,6 +15,10 @@
         Task<int> GetDaysLeftById(string userId);
 
         Task<string> GetCurrentUserId();
+
+        Task<IEnumerable<string>> GetUserIdsByResGroupId(string resGroupId);
+
+        string GetResGroupId();
 
         Task<string> GetRoleIdByName(string roleName);
     }
