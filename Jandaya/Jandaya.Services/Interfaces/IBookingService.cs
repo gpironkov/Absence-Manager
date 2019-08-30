@@ -1,5 +1,6 @@
 ﻿namespace Jandaya.Services.Interfaces
 {
+    using Jandaya.Data.Models;
     using Jandaya.Data.Models.BindingModels;
     using System.Collections.Generic;
     using System.Threading.Tasks;
@@ -13,6 +14,8 @@
         Task<bool> Create(BookAbsenceBindingModel bindingModel);
 
         Task<BookAbsenceBindingModel> GetBookingDataFromModel();
+
+        Task<ApproveBookingsBindingModel> GetBookingForApprove(string id);
 
         Task<bool> AddNewBookingType(AddNewBookingTypeBindingModel bindingModel);
 

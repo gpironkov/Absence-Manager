@@ -42,7 +42,9 @@
                             <td>@Model[i].EndDate.ToString("dd.MM.yyyy")</td>
                             <td>@Model[i].Duration</td>
                             <td>@Model[i].Status</td>
-                            <td>---</td>
+                            <td>
+                                <a asp-controller="Manager" asp-action="ApproveBookings" asp-route-id="@Model[i].Id">Approve/Reject</a>
+                            </td>
                         </tr>
                     }
             </tbody>

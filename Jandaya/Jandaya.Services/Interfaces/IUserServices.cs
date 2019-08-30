@@ -18,7 +18,7 @@
 
         Task<IEnumerable<string>> GetUserIdsByResGroupId(string resGroupId);
 
-        string GetResGroupId();
+        Task<string> GetResGroupId();
 
         Task<string> GetRoleIdByName(string roleName);
     }

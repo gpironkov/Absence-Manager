@@ -37,7 +37,15 @@
 
         [HttpGet]
         [AllowAnonymous]
-        public IActionResult Register() => View();
+        public IActionResult Register()
+        {
+            if (!this.User.Identity.IsAuthenticated)
+            {
+                return View();
+            }
+
+            return Content("You have already an account :)");
+        }
 
         [HttpPost]
         [AllowAnonymous]

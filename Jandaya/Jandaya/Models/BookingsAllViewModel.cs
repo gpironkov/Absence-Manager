@@ -7,8 +7,10 @@
     using System;
     using System.Collections.Generic;
 
-    public class BookingsAllViewModel : IMapFrom<User>, IMapFrom<IdentityUserRole<string>>, IHaveCustomMappings
+    public class BookingsAllViewModel : IMapFrom<User>, IHaveCustomMappings
     {
+        public string Id { get; set; }
+
         public string UserName { get; set; }
 
         public string BookingType { get; set; }

@@ -5,7 +5,10 @@
     using Microsoft.AspNetCore.Mvc;
     using System.Linq;
     using System.Threading.Tasks;
+    using Jandaya.Common;
+    using Microsoft.AspNetCore.Authorization;
 
+    [Authorize(Roles = GlobalConstants.ManagerRoleName)]
     public class ManagerController : Controller
     {
         private readonly IBookingService service;
@@ -29,6 +32,13 @@
 
             var bookings = await service.GetMyTeamBookings<BookingsAllViewModel>();
             return this.View(bookings);
+        }
+
+        public async Task<IActionResult> ApproveBookings(string id)
+        {
+            //var userRolesForUpdate = await this.adminService.GetUserAndRoles(id);
+
+            return this.View(); //userRolesForUpdate
         }
     }
 }

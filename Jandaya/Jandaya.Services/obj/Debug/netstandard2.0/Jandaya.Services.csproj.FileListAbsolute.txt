@@ -30,3 +30,19 @@ C:\Users\gpironkov\Desktop\Georgi\proj2\Absence-Manager\Jandaya\Jandaya.Services
 C:\Users\gpironkov\Desktop\Georgi\proj2\Absence-Manager\Jandaya\Jandaya.Services\obj\Debug\netstandard2.0\Jandaya.Services.csproj.CopyComplete
 C:\Users\gpironkov\Desktop\Georgi\proj2\Absence-Manager\Jandaya\Jandaya.Services\obj\Debug\netstandard2.0\Jandaya.Services.dll
 C:\Users\gpironkov\Desktop\Georgi\proj2\Absence-Manager\Jandaya\Jandaya.Services\obj\Debug\netstandard2.0\Jandaya.Services.pdb
+C:\Users\Lenovo\Desktop\Georgi\Jandaya 3\Absence-Manager\Jandaya\Jandaya.Services\bin\Debug\netstandard2.0\Jandaya.Services.deps.json
+C:\Users\Lenovo\Desktop\Georgi\Jandaya 3\Absence-Manager\Jandaya\Jandaya.Services\bin\Debug\netstandard2.0\Jandaya.Services.dll
+C:\Users\Lenovo\Desktop\Georgi\Jandaya 3\Absence-Manager\Jandaya\Jandaya.Services\bin\Debug\netstandard2.0\Jandaya.Services.pdb
+C:\Users\Lenovo\Desktop\Georgi\Jandaya 3\Absence-Manager\Jandaya\Jandaya.Services\bin\Debug\netstandard2.0\Jandaya.Common.dll
+C:\Users\Lenovo\Desktop\Georgi\Jandaya 3\Absence-Manager\Jandaya\Jandaya.Services\bin\Debug\netstandard2.0\Jandaya.Data.dll
+C:\Users\Lenovo\Desktop\Georgi\Jandaya 3\Absence-Manager\Jandaya\Jandaya.Services\bin\Debug\netstandard2.0\Jandaya.Services.Mapping.dll
+C:\Users\Lenovo\Desktop\Georgi\Jandaya 3\Absence-Manager\Jandaya\Jandaya.Services\bin\Debug\netstandard2.0\Jandaya.Data.pdb
+C:\Users\Lenovo\Desktop\Georgi\Jandaya 3\Absence-Manager\Jandaya\Jandaya.Services\bin\Debug\netstandard2.0\Jandaya.Services.Mapping.pdb
+C:\Users\Lenovo\Desktop\Georgi\Jandaya 3\Absence-Manager\Jandaya\Jandaya.Services\bin\Debug\netstandard2.0\Jandaya.Common.pdb
+C:\Users\Lenovo\Desktop\Georgi\Jandaya 3\Absence-Manager\Jandaya\Jandaya.Services\obj\Debug\netstandard2.0\Jandaya.Services.csprojAssemblyReference.cache
+C:\Users\Lenovo\Desktop\Georgi\Jandaya 3\Absence-Manager\Jandaya\Jandaya.Services\obj\Debug\netstandard2.0\Jandaya.Services.csproj.CoreCompileInputs.cache
+C:\Users\Lenovo\Desktop\Georgi\Jandaya 3\Absence-Manager\Jandaya\Jandaya.Services\obj\Debug\netstandard2.0\Jandaya.Services.AssemblyInfoInputs.cache
+C:\Users\Lenovo\Desktop\Georgi\Jandaya 3\Absence-Manager\Jandaya\Jandaya.Services\obj\Debug\netstandard2.0\Jandaya.Services.AssemblyInfo.cs
+C:\Users\Lenovo\Desktop\Georgi\Jandaya 3\Absence-Manager\Jandaya\Jandaya.Services\obj\Debug\netstandard2.0\Jandaya.Services.csproj.CopyComplete
+C:\Users\Lenovo\Desktop\Georgi\Jandaya 3\Absence-Manager\Jandaya\Jandaya.Services\obj\Debug\netstandard2.0\Jandaya.Services.dll
+C:\Users\Lenovo\Desktop\Georgi\Jandaya 3\Absence-Manager\Jandaya\Jandaya.Services\obj\Debug\netstandard2.0\Jandaya.Services.pdb

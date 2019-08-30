@@ -62,20 +62,21 @@
 
         public async Task<IEnumerable<TViewModel>> GetMyTeamBookings<TViewModel>()
         {
-            var currentUserId = await this.userService.GetCurrentUserId();
-            var currentTeamUserIds = await this.userService.GetUserIdsByResGroupId(this.userService.GetResGroupId().ToString());
+            var currentTeamUserIds = await this.userService.GetUserIdsByResGroupId(await this.userService.GetResGroupId());
 
             var bookings = new List<TViewModel>();
 
             foreach (var item in currentTeamUserIds)
             {
-                bookings = this.dbContext.Bookings
-                .Include(u => u.User)
-                .Include(u => u.BookingType)
-                .Where(u => u.UserId == item)
-                .OrderByDescending(u => u.CreatedOn)
+                var booking = this.dbContext.Bookings
+                .Include(b => b.User)
+                .Include(b => b.BookingType)
+                .Where(b => b.UserId == item)
+                .OrderByDescending(b => b.CreatedOn)
                 .To<TViewModel>()
                 .ToList();
+
+                bookings.AddRange(booking);
             }
 
             return bookings;
@@ -262,6 +263,33 @@
                 .FirstOrDefault(x => x.Name == bookingTypeName);
 
             return Task.FromResult(bookingType);
+        }
+
+        public Task<ApproveBookingsBindingModel> GetBookingForApprove(string id)
+        {
+            var booking = this.dbContext.Bookings
+               .Include(b => b.User)
+               .Include(b => b.BookingType)
+               .Where(b => b.Id == id)
+               .SingleOrDefault();
+
+            var model = new ApproveBookingsBindingModel();
+
+            model.FullName = $"{booking.User.FirstName} {booking.User.LastName}";
+            model.BookingType = booking.BookingType.Name;
+            model.StartDate = booking.StartDate;
+            model.EndDate = booking.EndDate;
+            model.Status = booking.Status;
+            //model.Roles = GetUserRoles().ToList();
+
+            //foreach (var role in user.Roles)
+            //{
+            //    var roleName = await this.GetRoleNameById(role.RoleId);
+            //    model.CurrentUserRole = roleName;
+            //}
+            //model.Roles.Remove(model.CurrentUserRole);
+
+            return Task.FromResult(model);
         }
     }
 }

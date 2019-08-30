@@ -21,3 +21,26 @@ C:\Users\gpironkov\Desktop\Georgi\proj2\Absence-Manager\Jandaya\Tests\Jandaya.Te
 C:\Users\gpironkov\Desktop\Georgi\proj2\Absence-Manager\Jandaya\Tests\Jandaya.Tests\bin\Debug\netcoreapp2.2\Jandaya.Services.Mapping.dll
 C:\Users\gpironkov\Desktop\Georgi\proj2\Absence-Manager\Jandaya\Tests\Jandaya.Tests\bin\Debug\netcoreapp2.2\Jandaya.Common.pdb
 C:\Users\gpironkov\Desktop\Georgi\proj2\Absence-Manager\Jandaya\Tests\Jandaya.Tests\bin\Debug\netcoreapp2.2\Jandaya.Services.Mapping.pdb
+C:\Users\Lenovo\Desktop\Georgi\Jandaya 3\Absence-Manager\Jandaya\Tests\Jandaya.Tests\bin\Debug\netcoreapp2.2\xunit.runner.visualstudio.dotnetcore.testadapter.dll
+C:\Users\Lenovo\Desktop\Georgi\Jandaya 3\Absence-Manager\Jandaya\Tests\Jandaya.Tests\bin\Debug\netcoreapp2.2\xunit.runner.reporters.netcoreapp10.dll
+C:\Users\Lenovo\Desktop\Georgi\Jandaya 3\Absence-Manager\Jandaya\Tests\Jandaya.Tests\bin\Debug\netcoreapp2.2\xunit.runner.utility.netcoreapp10.dll
+C:\Users\Lenovo\Desktop\Georgi\Jandaya 3\Absence-Manager\Jandaya\Tests\Jandaya.Tests\bin\Debug\netcoreapp2.2\Jandaya.Tests.deps.json
+C:\Users\Lenovo\Desktop\Georgi\Jandaya 3\Absence-Manager\Jandaya\Tests\Jandaya.Tests\bin\Debug\netcoreapp2.2\Jandaya.Tests.runtimeconfig.json
+C:\Users\Lenovo\Desktop\Georgi\Jandaya 3\Absence-Manager\Jandaya\Tests\Jandaya.Tests\bin\Debug\netcoreapp2.2\Jandaya.Tests.runtimeconfig.dev.json
+C:\Users\Lenovo\Desktop\Georgi\Jandaya 3\Absence-Manager\Jandaya\Tests\Jandaya.Tests\bin\Debug\netcoreapp2.2\Jandaya.Tests.dll
+C:\Users\Lenovo\Desktop\Georgi\Jandaya 3\Absence-Manager\Jandaya\Tests\Jandaya.Tests\bin\Debug\netcoreapp2.2\Jandaya.Tests.pdb
+C:\Users\Lenovo\Desktop\Georgi\Jandaya 3\Absence-Manager\Jandaya\Tests\Jandaya.Tests\bin\Debug\netcoreapp2.2\Jandaya.Common.dll
+C:\Users\Lenovo\Desktop\Georgi\Jandaya 3\Absence-Manager\Jandaya\Tests\Jandaya.Tests\bin\Debug\netcoreapp2.2\Jandaya.Data.dll
+C:\Users\Lenovo\Desktop\Georgi\Jandaya 3\Absence-Manager\Jandaya\Tests\Jandaya.Tests\bin\Debug\netcoreapp2.2\Jandaya.Services.dll
+C:\Users\Lenovo\Desktop\Georgi\Jandaya 3\Absence-Manager\Jandaya\Tests\Jandaya.Tests\bin\Debug\netcoreapp2.2\Jandaya.Services.Mapping.dll
+C:\Users\Lenovo\Desktop\Georgi\Jandaya 3\Absence-Manager\Jandaya\Tests\Jandaya.Tests\bin\Debug\netcoreapp2.2\Jandaya.Data.pdb
+C:\Users\Lenovo\Desktop\Georgi\Jandaya 3\Absence-Manager\Jandaya\Tests\Jandaya.Tests\bin\Debug\netcoreapp2.2\Jandaya.Services.pdb
+C:\Users\Lenovo\Desktop\Georgi\Jandaya 3\Absence-Manager\Jandaya\Tests\Jandaya.Tests\bin\Debug\netcoreapp2.2\Jandaya.Common.pdb
+C:\Users\Lenovo\Desktop\Georgi\Jandaya 3\Absence-Manager\Jandaya\Tests\Jandaya.Tests\bin\Debug\netcoreapp2.2\Jandaya.Services.Mapping.pdb
+C:\Users\Lenovo\Desktop\Georgi\Jandaya 3\Absence-Manager\Jandaya\Tests\Jandaya.Tests\obj\Debug\netcoreapp2.2\Jandaya.Tests.csprojAssemblyReference.cache
+C:\Users\Lenovo\Desktop\Georgi\Jandaya 3\Absence-Manager\Jandaya\Tests\Jandaya.Tests\obj\Debug\netcoreapp2.2\Jandaya.Tests.csproj.CoreCompileInputs.cache
+C:\Users\Lenovo\Desktop\Georgi\Jandaya 3\Absence-Manager\Jandaya\Tests\Jandaya.Tests\obj\Debug\netcoreapp2.2\Jandaya.Tests.AssemblyInfoInputs.cache
+C:\Users\Lenovo\Desktop\Georgi\Jandaya 3\Absence-Manager\Jandaya\Tests\Jandaya.Tests\obj\Debug\netcoreapp2.2\Jandaya.Tests.AssemblyInfo.cs
+C:\Users\Lenovo\Desktop\Georgi\Jandaya 3\Absence-Manager\Jandaya\Tests\Jandaya.Tests\obj\Debug\netcoreapp2.2\Jandaya.Tests.csproj.CopyComplete
+C:\Users\Lenovo\Desktop\Georgi\Jandaya 3\Absence-Manager\Jandaya\Tests\Jandaya.Tests\obj\Debug\netcoreapp2.2\Jandaya.Tests.dll
+C:\Users\Lenovo\Desktop\Georgi\Jandaya 3\Absence-Manager\Jandaya\Tests\Jandaya.Tests\obj\Debug\netcoreapp2.2\Jandaya.Tests.pdb

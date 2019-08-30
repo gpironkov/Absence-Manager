@@ -76,25 +76,25 @@
             return Task.FromResult(daysLeft);
         }
 
-        public Task<IEnumerable<string>> GetUserIdsByResGroupId(string resGroupId)
+        public async Task<IEnumerable<string>> GetUserIdsByResGroupId(string resGroupId)
         {
-            var currentUser = this.GetCurrentUserId();
+            var currentUser = await this.GetCurrentUserId();
 
             var userIds = this.dbContext.Users
-                .Where(u => u.Id != currentUser.ToString())
+                .Where(u => u.Id != currentUser)
                 .Where(u => u.ResourceGroupId == resGroupId)
                 .Select(u => u.Id)
                 .ToList();
 
-            return Task.FromResult(userIds.AsEnumerable());
+            return userIds.AsEnumerable();
         }
 
-        public string GetResGroupId()
+        public async Task<string> GetResGroupId()
         {
-            var currentUser = this.GetCurrentUserId();
+            var currentUser = await this.GetCurrentUserId();
 
             var resGroupId = this.dbContext.Users
-                .FirstOrDefault(u => u.Id == "aee7f483-4091-42fd-b10a-3c6f115094f0") //currentUser.ToString())
+                .FirstOrDefault(u => u.Id == currentUser)
                 .ResourceGroupId;
 
             return resGroupId;
