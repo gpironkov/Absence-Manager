@@ -7,6 +7,7 @@
     using System.Threading.Tasks;
     using Jandaya.Common;
     using Microsoft.AspNetCore.Authorization;
+    using Jandaya.Data.Models.BindingModels;
 
     [Authorize(Roles = GlobalConstants.ManagerRoleName)]
     public class ManagerController : Controller
@@ -36,9 +37,22 @@
 
         public async Task<IActionResult> ApproveBookings(string id)
         {
-            //var userRolesForUpdate = await this.adminService.GetUserAndRoles(id);
+            var bookingsForApprove = await this.service.GetBookingForApprove(id);
 
-            return this.View(); //userRolesForUpdate
+            return this.View(bookingsForApprove);
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> ApproveBookings(ApproveBookingsBindingModel model, string id)
+        {
+            if (!this.ModelState.IsValid)
+            {
+                return BadRequest(ModelState.Values.SelectMany(v => v.Errors).Select(error => error.ErrorMessage));
+            }
+
+            await this.service.SetBookingStatus(id, model);
+
+            return RedirectToAction(nameof(this.BookingsInYourTeam));
         }
     }
 }

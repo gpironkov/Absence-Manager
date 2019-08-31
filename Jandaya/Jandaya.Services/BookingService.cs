@@ -53,7 +53,6 @@
             var model = new BookAbsenceBindingModel();
             model.BookingTypes = bookingTypes.ToList();
 
-            //model.Duration = 0;
             model.DaysLeft = await this.GetDaysLeft();
             model.Approver = await this.GetApprover();
 
@@ -94,21 +93,7 @@
                 .To<TViewModel>()
                 .ToList();
 
-            //foreach (var booking in bookings)
-            //{
-            //    var userName = await this.GetUserNameById(booking.User.Id);
-            //}
-
             return bookings;
-        }
-
-        public Task<string> GetUserNameById(string userId)
-        {
-            var userRoleName = this.dbContext.Users
-                .FirstOrDefault(u => u.Id == userId)
-                .UserName;
-
-            return Task.FromResult(userRoleName);
         }
 
         public Task<IEnumerable<string>> GetBookingTypes()
@@ -280,16 +265,24 @@
             model.StartDate = booking.StartDate;
             model.EndDate = booking.EndDate;
             model.Status = booking.Status;
-            //model.Roles = GetUserRoles().ToList();
-
-            //foreach (var role in user.Roles)
-            //{
-            //    var roleName = await this.GetRoleNameById(role.RoleId);
-            //    model.CurrentUserRole = roleName;
-            //}
-            //model.Roles.Remove(model.CurrentUserRole);
 
             return Task.FromResult(model);
+        }
+
+        public Task<Booking> GetBookingById(string id)
+        {
+            var booking = this.dbContext.Bookings.SingleOrDefault(u => u.Id == id);
+
+            return Task.FromResult(booking);
+        }        
+
+        public async Task SetBookingStatus(string bookingId, ApproveBookingsBindingModel model)
+        {
+            var bookingToUpdate = await GetBookingById(bookingId);
+
+            bookingToUpdate.Status = model.Status;
+
+            await this.dbContext.SaveChangesAsync();
         }
     }
 }

@@ -32,7 +32,6 @@
         @if (this.SignInManager.IsSignedIn(this.User) && this.User.IsInRole(GlobalConstants.ManagerRoleName))
         {
             <div>
-                <br />
                 <a class="btn btn-outline-primary btn-lg" asp-controller="Manager" asp-action="BookingsInYourTeam">View Bookings in Your Team</a>
                 <a class="btn btn-outline-primary btn-lg" asp-controller="Manager" asp-action="Index">Create Booking</a>
             </div>

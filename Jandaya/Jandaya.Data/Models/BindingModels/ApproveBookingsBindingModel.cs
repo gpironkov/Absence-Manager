@@ -14,9 +14,11 @@
         [Display(Name = "Type")]
         public string BookingType { get; set; }
 
+        [DataType(DataType.Text)]
         [Display(Name = "Start")]
         public DateTime StartDate { get; set; }
 
+        [DataType(DataType.Text)]
         [Display(Name = "End")]
         public DateTime EndDate { get; set; }
 

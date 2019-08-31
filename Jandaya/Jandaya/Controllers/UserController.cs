@@ -93,7 +93,15 @@
 
         [HttpGet]
         [AllowAnonymous]
-        public IActionResult Login() => View();
+        public IActionResult Login()
+        {
+            if (!this.User.Identity.IsAuthenticated)
+            {
+                return View();
+            }
+
+            return Content("You have already signed in :)");
+        }
 
         [HttpPost]
         [AllowAnonymous]

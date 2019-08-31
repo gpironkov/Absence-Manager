@@ -7,6 +7,8 @@
 
     public interface IBookingService
     {
+        Task<Booking> GetBookingById(string id);
+
         Task<IEnumerable<TViewModel>> GetMyBookings<TViewModel>();
 
         Task<IEnumerable<TViewModel>> GetMyTeamBookings<TViewModel>();
@@ -22,5 +24,7 @@
         Task<IEnumerable<string>> GetBookingTypes();        
 
         Task<string> GetCurrResourceGroupId();
+
+        Task SetBookingStatus(string bookingId, ApproveBookingsBindingModel model);
     }
 }
